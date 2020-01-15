@@ -1,11 +1,9 @@
 ---
-title: Fox Village In Japan
-subtitle: >-
-  Apparently, Japan is covered in magical and irresistibly cute animal
-  sanctuaries.
+title: SIMPELDESA
+subtitle: Sistem Informasi Pelayanan dan Manajemen Desa
 date: '2018-01-11'
-thumb_img_path: images/10.jpg
-content_img_path: images/10.jpg
+thumb_img_path: /images/Screen Shot 2020-01-07 at 15.15.50.png
+content_img_path: /images/dahboard - login.jpg
 excerpt: >-
   Apparently, Japan is covered in magical and irresistibly cute animal
   sanctuaries. The Shrines of Ise have been celebrated as the prototype of
@@ -14,6 +12,7 @@ excerpt: >-
   distinction between rooms and indoor and outdoor space.
 template: post
 ---
+![Home Page](/images/Home.jpg "Home Page")
 
 Apparently, Japan is covered in magical and irresistibly cute animal sanctuaries. **The Shrines of Ise** have been celebrated as the prototype of Japanese architecture. Largely of wood, traditional housing and many temple buildings see the use of tatami mats and sliding doors that break down the distinction between rooms and indoor and outdoor space.
 
