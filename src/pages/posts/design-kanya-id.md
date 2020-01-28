@@ -17,9 +17,7 @@ Female Lifestyle Online Media
 
 ### URL
 
-[www.kanya.id](kanya.id)
-
-
+[www.kanya.id](https://kanya.id)
 
 ### Screenshoots
 
