@@ -45,6 +45,7 @@
 
   img {
     width: 100%;
+    @include border-radius(16px);
   }
 }
 
