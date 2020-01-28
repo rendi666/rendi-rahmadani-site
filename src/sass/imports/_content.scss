@@ -83,6 +83,8 @@
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  @include border_radius(16px);
+  overflow: hidden;
 }
 
 .post-card-thumbnail {
@@ -209,7 +211,10 @@
 /* Intro section */
 .intro {
   margin-bottom: 2.5rem;
-
+  width:100%;
+  max-width:inherit;
+  overflow: hidden;
+  @include border_radius(16px);
   @media only screen and (min-width: 801px) {
     margin-bottom: 3.33333rem;
   }
@@ -220,15 +225,15 @@
   font-family: _font(secondary);
   font-size: 1.33333rem;
   line-height: 1.5;
-  margin-bottom: 1.66667rem;
+  margin-bottom: 0;
 
   > * {
-    margin-bottom: 1.66667rem;
+    margin-bottom: 0;
   }
 }
 
 .intro-cta{
-  margin-bottom: 1.66667rem;
+  margin-bottom: 0;
 
   .button {
     margin: 0 15px 0.83333rem 0;

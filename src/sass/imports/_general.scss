@@ -380,8 +380,7 @@ img {
 }
 
 /* Text meant only for screen readers */
-.screen-reader-text,
-.site-logo + .site-title {
+.screen-reader-text {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
   height: 1px;

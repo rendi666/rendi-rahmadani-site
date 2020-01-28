@@ -9,6 +9,7 @@
   padding-top: 0.666666em;
   position: sticky;
   top:0;
+  z-index:10;
 }
 
 .site-header-inside {
@@ -31,6 +32,9 @@
   @include border_radius(40px);
   position: relative;
   overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 1rem;
   a {
     border: 0;
   }
@@ -43,11 +47,12 @@
 .site-title {
   color: _palette(secondary);
   font-family: _font(secondary);
-  font-size: 1.66667rem;
+  font-size: 1.2rem;
   font-weight: bold;
   line-height: 1.2;
   margin: 0;
-
+  display: inline-block;
+  vertical-align: middle;
   a {
     border: 0;
     color: inherit;
