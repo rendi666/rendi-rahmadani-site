@@ -1,6 +1,9 @@
 ---
 title: About Me
 img_path: /images/Character.jpg
+menus:
+  main:
+    title: About Me
 template: page
 ---
 ## Experiences
