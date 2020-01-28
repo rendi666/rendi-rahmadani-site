@@ -16,7 +16,7 @@ Design and build News Technology Website
 
 ### URL
 
-[www.digination.id](digination.id)
+[www.digination.id](https://digination.id)
 
 ### Screenshoots
 
