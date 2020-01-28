@@ -1,6 +1,6 @@
 ---
 title: About Me
-img_path: /images/+62 812-8612-7494 20191212_080652.jpg
+img_path: /images/Character (1).jpg
 menus:
   main:
     title: About Me
