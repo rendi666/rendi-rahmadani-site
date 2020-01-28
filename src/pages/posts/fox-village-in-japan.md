@@ -11,19 +11,13 @@ template: post
 
 Simpeldesa (Sistem Informasi Management Pelayanan Desa)
 
-
-
 ### Job Description
 
 Design Company Web Simpeldesa using Sketchapp and build template with Aula Framework HTML.
 
-
-
 ### URL
 
 [www.simpeldesa.com](https://simpeldesa.com)
-
-
 
 ### Screenshoots
 
