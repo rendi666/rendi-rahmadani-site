@@ -17,4 +17,4 @@ Build Interactive and Responsive Webs With HTML5, CSS3, and Javascript
 
 ### URL
 
-[](https://cookin.id/)[vik.kompas.com/gerhana](vik.kompas.com/gerhana)
+[](https://cookin.id/)[vik.kompas.com/gerhana](https://vik.kompas.com/gerhana)
