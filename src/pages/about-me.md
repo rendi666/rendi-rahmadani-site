@@ -4,6 +4,7 @@ img_path: /images/Character (1).jpg
 menus:
   main:
     title: About Me
+    weight: 5
 template: page
 ---
 ## Experiences
