@@ -1,6 +1,6 @@
 ---
-title: SIMPELDESA
-subtitle: Sistem Informasi Pelayanan dan Manajemen Desa
+title: Responsive Webs simpeldesa.com
+subtitle: ''
 date: '2018-01-11'
 thumb_img_path: /images/Screen Shot 2020-01-07 at 15.15.50.png
 content_img_path: /images/dahboard - login.jpg
