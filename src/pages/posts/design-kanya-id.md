@@ -1,5 +1,5 @@
 ---
-title: Design kanya.id
+title: Design Female Portal kanya.id
 subtitle: Female Lifestyle Online Media
 date: 2020-01-28T08:32:59.536Z
 thumb_img_path: /images/kanya.jpg
