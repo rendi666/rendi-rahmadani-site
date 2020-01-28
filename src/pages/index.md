@@ -1,9 +1,7 @@
 ---
 title: Home
 sections:
-  - actions:
-      - label: Learn More
-        url: /about
+  - actions: []
     component: Intro
     content: >-
       ![Portofolio Rendi Rahmadani](/images/Homepage-portfolio.jpg "Welcome To
