@@ -7,7 +7,7 @@ subtitle: >-
 img_path: images/6.jpg
 menus:
   main:
-    title: Style Guide
+    title: My Blog
     weight: 3
 template: page
 ---
