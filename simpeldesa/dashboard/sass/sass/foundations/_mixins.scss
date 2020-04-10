@@ -1,0 +1,518 @@
+//--------------------------------------------------------------------------------
+//WEBKIT TOOLS OPTIONAL Mixins
+//--------------------------------------------------------------------------------
+@mixin blur-radius($radius) {
+  -webkit-filter: blur($radius);
+     -moz-filter: blur($radius);
+       -o-filter: blur($radius);
+      -ms-filter: blur($radius);
+          filter: blur($radius);
+}
+@mixin text-shadow($args...) {
+  -webkit-text-shadow: $args;
+     -moz-text-shadow: $args;
+       -o-text-shadow: $args;
+      -ms-text-shadow: $args;
+          text-shadow: $args;
+}
+@mixin transition($args...) {
+  -webkit-transition: $args;
+     -moz-transition: $args;
+      -ms-transition: $args;
+       -o-transition: $args;
+          transition: $args;
+}
+@mixin transform($args...) {
+  -webkit-transform: $args;
+     -moz-transform: $args;
+      -ms-transform: $args;
+       -o-transform: $args;
+          transform: $args;
+}
+@mixin transform-origin($args...) {
+  -webkit-transform-origin: $args;
+     -moz-transform-origin: $args;
+      -ms-transform-origin: $args;
+       -o-transform-origin: $args;
+          transform-origin: $args;
+}
+@mixin animation($args...) {
+  -webkit-animation: $args;
+     -moz-animation: $args;
+      -ms-animation: $args;
+       -o-animation: $args;
+          animation: $args;
+}
+@mixin box-sizing($boxmodel) {
+  -webkit-box-sizing: $boxmodel;
+     -moz-box-sizing: $boxmodel;
+          box-sizing: $boxmodel;
+}
+
+//--------------------------------------------------------------------------------
+//BACKGROUND, OPACITY, AND GRADIENTS
+//--------------------------------------------------------------------------------
+@mixin linear-gradient(
+  $start_color:#000000, 
+  $opacity_start: 1, 
+  $pos_start: 0%, 
+  $end_color:#ffffff, 
+  $opacity_end: 1, 
+  $pos_end: 100%, 
+  $direction_to: top) {
+  background: $start_color; /* Old browsers */
+  background: -moz-linear-gradient($direction_to, rgba($start_color, $opacity_start) $pos_start, rgba($end_color, $opacity_end) $pos_end); /* FF3.6+ */
+  background: -webkit-linear-gradient($direction_to, rgba($start_color, $opacity_start) $pos_start, rgba($end_color, $opacity_end) $pos_end); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to $direction_to, rgba($start_color, $opacity_start) $pos_start, rgba($end_color, $opacity_end) $pos_end); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start_color', endColorstr='$end_color',GradientType=1 ); /* IE6-9 */
+}
+@mixin linear-gradient-directional(
+  $start_color:#000000, 
+  $opacity_start: 1, 
+  $pos_start: 0%, 
+  $end_color:#ffffff, 
+  $opacity_end: 1, 
+  $pos_end: 100%, 
+  $deg: 45deg) {
+  background: $start_color; /* Old browsers */
+  background: -moz-linear-gradient($deg, rgba($start_color, $opacity_start) $pos_start, rgba($end_color, $opacity_end) $pos_end); /* FF3.6+ */
+  background: -webkit-linear-gradient($deg, rgba($start_color, $opacity_start) $pos_start, rgba($end_color, $opacity_end) $pos_end); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient($deg, rgba($start_color, $opacity_start) $pos_start, rgba($end_color, $opacity_end) $pos_end); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start_color', endColorstr='$end_color',GradientType=1 ); /* IE6-9 */
+}
+@mixin radial-gradient(
+  $pos_rad: center, 
+  $top_color:#000000, 
+  $opacity_top: 1, 
+  $pos_top: 100%, 
+  $mid_color:#444444, 
+  $opacity_mid: 1, 
+  $pos_mid: 50%, 
+  $bot_color:#ffffff, 
+  $opacity_bot: 1, 
+  $pos_bot: 0%) {
+  background: $top_color; /* Old browsers */
+  background: -moz-radial-gradient($pos_rad, ellipse cover, rgba($bot_color, $opacity_bot) $pos_bot, rgba($mid_color, $opacity_mid) $pos_mid, rgba($top_color, $opacity_top) $pos_top); /* FF3.6+ */
+  background: -webkit-radial-gradient($pos_rad, ellipse cover, rgba($bot_color, $opacity_bot) $pos_bot, rgba($mid_color, $opacity_mid) $pos_mid, rgba($top_color, $opacity_top) $pos_top); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at $pos_rad, rgba($bot_color, $opacity_bot) $pos_bot, rgba($mid_color, $opacity_mid) $pos_mid, rgba($top_color, $opacity_top) $pos_top); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$top_color', endColorstr='$bottom_color',GradientType=1 ); /* IE6-9 */
+}
+@mixin background-opacity($color, $opacity: 0.3) {
+  background-color: $color; /* The Fallback */
+  background-color: rgba($color, $opacity);
+}
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+//--------------------------------------------------------------------------------
+//BREAKPOINTS FUNCTIONS
+//--------------------------------------------------------------------------------
+@function breakpoint_min($size, $breakpoints: $grid_breakpoints) {
+  $min: map-get($breakpoints, $size);
+  @return if($min != 0, $min, null);
+}
+@function breakpoint_max($size, $breakpoints: $grid_breakpoints) {
+  $max: map-get($breakpoints, $size);
+  @return if($max != 0, $max, null);
+}
+@function breakpoint_infix($size, $breakpoints: $grid_breakpoints) {
+  @return if(breakpoint_min($size, $breakpoints) == null, "", "-#{$size}");
+}
+
+//--------------------------------------------------------------------------------
+//MEDIA QUERIES
+//--------------------------------------------------------------------------------
+@mixin mquery($size, $breakpoints: $grid_breakpoints) {
+  $min: breakpoint_min($size, $breakpoints);
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+@mixin mquery_max($size, $breakpoints: $grid_breakpoints) {
+  $max: breakpoint_max($size, $breakpoints);
+  @if $max {
+    @media (max-width: $max) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+@mixin mquery_between($lower, $upper, $breakpoints: $grid_breakpoints) {
+  $min: breakpoint_min($lower, $breakpoints);
+  $max: breakpoint_max($upper, $breakpoints);
+
+  @if $min != null and $max != null {
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  } @else if $max == null {
+    @include mquery($lower, $breakpoints) {
+      @content;
+    }
+  } @else if $min == null {
+    @include mquery_max($upper, $breakpoints) {
+      @content;
+    }
+  }
+}
+
+@mixin mquery_between_detikcom($lower, $upper, $breakpoints: $grid_breakpoints_between_detikcom) {
+  $min: breakpoint_min($lower, $breakpoints);
+  $max: breakpoint_max($upper, $breakpoints);
+
+  @if $min != null and $max != null {
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  }
+}
+
+//--------------------------------------------------------------------------------
+//GRID SYSTEM
+//--------------------------------------------------------------------------------
+@mixin make_container($gap: $config-grid-gutter) {
+  @if $config-responsive-web {
+    width: 100%;
+    padding-left: ($gap / 2) - 1;
+    padding-right: ($gap / 2) - 1;
+    @include mquery(md) {
+      padding-left: $gap / 2;
+      padding-right: $gap / 2;
+    }
+  }
+  @else if $config-mobile-web {
+    width: 100%;
+    padding-left: ($gap / 2) - 1;
+    padding-right: ($gap / 2) - 1;
+  }
+  @else {
+    padding-left: $gap / 2;
+    padding-right: $gap / 2;
+  }
+  margin-right: auto;
+  margin-left: auto;
+}
+@mixin make_container_max_widths($max-widths: $container_max_widths, $breakpoints: $grid_breakpoints) {
+  @if $config-responsive-web {
+    @each $breakpoint, $container_max_widths in $max-widths {
+      @include mquery($breakpoint, $breakpoints) {
+        max-width: $container_max_widths;
+      }
+    }
+  }
+  @else if $config-mobile-web {}
+  @else {
+    width: map-get($container_max_widths, xl);
+  }
+}
+
+@mixin make_row($gap: $config-grid-gutter) {
+  @if $config-responsive-web {
+    margin-left: -($gap / 4) + 0.5;
+    margin-right: -($gap / 4) + 0.5;
+    @include mquery(md) {
+      margin-left: -$gap / 2;
+      margin-right: -$gap / 2;
+    }
+  }
+  @else if $config-mobile-web {
+    margin-left: -($gap / 4) + 0.5;
+    margin-right: -($gap / 4) + 0.5;
+  }
+  @else {
+    margin-left: -$gap / 2;
+    margin-right: -$gap / 2;
+  }
+}
+
+@mixin make_col($size, $columns: $grid-columns) {
+  -ms-flex: ($size / $columns);
+  flex: 0 0 percentage($size / $columns);
+  // Add a `max-width` to ensure content within each column does not blow out
+  // the width of the column. Applies to IE10+ and Firefox. Chrome and Safari
+  // do not appear to require this.
+  max-width: percentage($size / $columns);
+}
+
+@mixin make_grid_columns($columns: $config-grid, $gap: $config-grid-gutter, $breakpoints: $grid_breakpoints) {
+  // Common properties for all breakpoints
+  %grid_column {
+    position: relative;
+    width: 100%;
+    @if $config-responsive-web {
+      padding-left: ($gap / 4) - 0.5;
+      padding-right: ($gap / 4) - 0.5;
+      @include mquery(md) {
+        padding-left: $gap / 2;
+        padding-right: $gap / 2;
+      }
+    }
+    @else if $config-mobile-web {
+      padding-left: ($gap / 4) - 0.5;
+      padding-right: ($gap / 4) - 0.5;
+    }
+    @else {
+      padding-left: $gap / 2;
+      padding-right: $gap / 2;
+    }
+  }
+
+  @each $breakpoint in map-keys($breakpoints) {
+    $infix: breakpoint_infix($breakpoint, $breakpoints);
+
+    // Allow columns to stretch full width below their breakpoints
+    @for $i from 1 through $columns {
+      .column#{$infix}-#{$i} {
+        @extend %grid_column;
+      }
+    }
+    .column#{$infix},
+    .column#{$infix}-auto {
+      @extend %grid_column;
+    }
+
+    @include mquery($breakpoint, $breakpoints) {
+      // Provide basic `.column-{bp}` classes for equal-width flexbox columns
+      .column#{$infix} {
+        -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        max-width: 100%;
+      }
+      .column#{$infix}-auto {
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+        width: auto;
+        max-width: 100%; // Reset earlier grid tiers
+      }
+
+      @for $i from 1 through $columns {
+        .column#{$infix}-#{$i} {
+          @include make_col($i, $columns);
+        }
+      }
+      
+    }
+  }
+}
+
+//--------------------------------------------------------------------------------
+//RESPONSIVE BOX / ASPEC RATIO*/
+//--------------------------------------------------------------------------------
+@mixin aspect-ratio($width, $height) {
+    padding-bottom: ($height / $width) * 100%;
+}
+
+//--------------------------------------------------------------------------------
+//DISPLAY FLEX CONTENT
+//--------------------------------------------------------------------------------
+@mixin display-flex(
+  $flex-grow: null,       // ex: 1 or 2 unitless number
+  $flex-shrink: null,     // ex: 1 or 2 unitless number
+  $flex-basis: null,      // ex: 50px, 30% with unit
+  $flex-direction: null,  // ex: row, row-reverse, column, column-reverse
+  $flex-wrap: null,       // ex: nowrap, wrap, wrap-reverse
+  $align-items: null    // ex: flex-start, flex-end, center, stretch, baseline
+  ) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex : $flex-grow $flex-shrink $flex-basis;
+  -ms-flex: $flex-grow $flex-shrink $flex-basis;
+  -webkit-flex: $flex-grow $flex-shrink $flex-basis;
+  flex-flow: $flex-direction $flex-wrap;
+  align-items: $align-items;
+}
+
+
+// --------------------------------------------------------------------------------
+// FONT FACE
+// --------------------------------------------------------------------------------
+@mixin includeFontFace($fontFamilyName, $folderName, $fileName, $weight: normal, $style: normal) {
+@font-face {
+  font-family: $fontFamilyName;
+  font-weight: $weight;
+  font-style: $style;
+    //IE9 Compatibility Mode
+    src: url('#{$config-fonts-url}/#{$folderName}/#{$fileName}.eot');
+    //IE6-IE8
+    src: url('#{$config-fonts-url}/#{$folderName}/#{$fileName}.eot?#iefix') format('embedded-opentype'),
+         //Super Modern Browsers
+         url('#{$config-fonts-url}/#{$folderName}/#{$fileName}.woff2') format('woff2'),
+         //Majority of Modern Browsers
+         url('#{$config-fonts-url}/#{$folderName}/#{$fileName}.woff') format('woff'),
+         //Safari, Android, iOS
+         url('#{$config-fonts-url}/#{$folderName}/#{$fileName}.ttf') format('truetype'),
+         //Legacy iOS
+         url('#{$config-fonts-url}/#{$folderName}/#{$fileName}.svg##{$fileName}') format('svg');
+    }
+}
+
+
+// --------------------------------------------------------------------------------
+// COLORS & THEMING
+// --------------------------------------------------------------------------------
+// color & background
+// Set color on an element
+// 
+// Required arguments:
+// `$color` String
+// `$scheme` String
+// `$tone` String
+// 
+// Optional arguments:
+// `$tone` String
+// 
+// Allowed `$color`(s), `$scheme`(s) as namespaces can be found at:
+// "config/_base_color.scss" & config/_brand_color.scss"
+// 
+// Examples of use:
+// @include color(base-color, black)
+// @include color(base-color, black, light-1)
+// @include color(detik-color, blue, light-2)
+// @include color-bg(detik-color, orange, light-1)
+// --------------------------------------------------------------------------------
+@mixin color($color, $scheme, $tone: base) {
+  color: get('#{$color}.#{$scheme}.#{$tone}');
+}
+@mixin color-bg($color, $scheme, $tone: base) {
+  background: get('#{$color}.#{$scheme}.#{$tone}');
+}
+
+// --------------------------------------------------------------------------------
+// FONT SIZES
+// --------------------------------------------------------------------------------
+@mixin font-size($size, $icon: null) {
+  @if $icon == 'icon' {
+    font-size: get('font.icon.size.#{$size}');
+  }
+  @else {
+    font-size: get('font.size.#{$size}');
+  }
+}
+
+// --------------------------------------------------------------------------------
+// BORDER RADIUS
+// --------------------------------------------------------------------------------
+// border-radius
+// Set predefined or a custom radius on an element
+//
+// Required arguments:
+// `$value` String/Number
+//
+// Optional arguments:
+// `$properties` List
+//
+// Allowed `$value`(s) as namespaces can be found at:
+// "config/_border.scss"
+//
+// Examples of use:
+// @include border-radius(5px)
+// @include border-radius('xs')
+// @include border-radius('m', ('top'))
+// @include border-radius('xl', ('top-left', 'bottom-right'))
+//
+// *Attention*
+// Improper use of this mixin can output duplicate radius
+// For example, if you use $properties as ('top', 'top-left')
+// Since 'top' means top-right and top-left, it would output:
+// top-right, top-left, top-left
+// --------------------------------------------------------------------------------
+@mixin border-radius ($value, $properties: ()) {
+  @if type-of($value) == 'string' {
+    $value: get('border.radius.#{$value}');
+  }
+
+  @if type-of($value) == 'number' and unit($value) != '%' {
+    $value:$value;
+  }
+
+  $_properties: ();
+
+  @each $property in $properties {
+    @if $property == 'top' or $property == 'bottom' {
+      $_properties: join($_properties, ('#{$property}-right', '#{$property}-left'));
+    }
+    @else if $property == 'left' or $property == 'right' {
+      $_properties: join($_properties, ('top-#{$property}', 'bottom-#{$property}'));
+    }
+    @else {
+      $_properties: join($_properties, $property);
+    }
+  }
+
+  @if length($_properties) > 0 {
+    @each $_property in $_properties {
+      border-#{$_property}-radius: $value;
+    }
+  }
+  @else {
+    border-radius: $value;
+  }
+}
+
+// --------------------------------------------------------------------------------
+// BOX SHADOW
+// --------------------------------------------------------------------------------
+// box-shadow
+// Set predefined or a custom radius on an element
+//
+// Optional arguments:
+// `$size` String
+// `$color` Color value or map get on config base_color/brand_color
+// `$style` String
+// `$middle` Boolean
+//
+// Allowed `$size`(s) as namespaces can be found at:
+// "config/_box-shadow.scss"
+// 
+// Allowed `$color`(s) as namespaces can be found at:
+// "config/_base_color.scss" & config/_brand_color.scss"
+// 
+// Default:
+// @include box-shadow($size: sm, $color: rgba(0,0,0,0.04), style: [default/outline], $middle: false)
+// 
+// Examples of use:
+// @include box-shadow(sm)
+// @include box-shadow(md, $style: inset, $middle: true)
+// --------------------------------------------------------------------------------
+@mixin box-shadow ($size: sm, $color: get('box-shadow.color'), $opacity: get('box-shadow.opacity'), $spread: 0, $style: null, $middle: false ) {
+  $horizontal: get('box-shadow.length.horizontal');
+  $vertical: get('box-shadow.length.vertical.#{$size}');
+  $blur: get('box-shadow.radius.blur.#{$size}');
+  $color-opacity: rgba($color, $opacity);
+  @if $middle == true {
+    $vertical: 0;
+  }
+  box-shadow: $style $horizontal $vertical $blur $spread $color-opacity;
+}
+
+@mixin sticky-css ($top: 0px) {
+  position: sticky;
+  position: -webkit-sticky;
+  top: $top;
+}
+
+// --------------------------------------------------------------------------------
+// CLEARFIX
+// --------------------------------------------------------------------------------
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}

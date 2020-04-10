@@ -1,0 +1,48 @@
+.pagination { 
+	font-size: 14px; 
+	@extend %_display-flex-wrap;
+	a { 
+		display: inline-block;
+		width: 36px;
+		height: 36px;
+		margin: 0 $base-spacing;
+		justify-content: center;
+		align-items: center;		
+		@extend %_font-bold;
+		@extend %_display-flex-wrap;
+		
+		&:first-child { 
+			margin-right: $base-spacing*2; 
+		}
+		&:last-child { 
+			margin-left: $base-spacing*2;  
+		}
+		&:first-child, &:last-child {
+			width: auto;
+			padding: 0 $base-spacing*6;
+			@include border-radius(20px);
+		}
+		&:hover { 
+			@include color-bg(brand-color, orange);
+			@include color(base-color, white);
+		}
+		&.null {
+			border: 1px solid get('base-color.black.light-5');
+			@include color(base-color, black, light-3);
+			@include color-bg(base-color, black, light-5);
+		}
+	}
+	&__item {
+		border: 1px solid get('brand-color.orange.base');
+		@extend %_circle;
+		@include color(brand-color, orange);
+		&--selected { 
+			@include color-bg(brand-color, orange);
+			@include color(base-color, white);
+		}
+	}
+	&__prev, &__next {
+		@include color-bg(brand-color, orange);
+		@include color(base-color, white);
+	}
+}

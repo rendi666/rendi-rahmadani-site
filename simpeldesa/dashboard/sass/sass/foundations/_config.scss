@@ -1,0 +1,10 @@
+//--------------------------------------------------------------------------------
+//CONFIG
+//--------------------------------------------------------------------------------
+$config-fonts-url         : '../../assets/fonts' !default;
+$config-responsive-web    : true !default;
+$config-mobile-web        : false !default;
+
+@if $config-mobile-web {
+  $config-responsive-web : false;
+}

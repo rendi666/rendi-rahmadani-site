@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)#home -->
+<html lang="en">
+
+<head>
+	{{> head}}
+<body>
+	<div class="app-container app-theme-white body-tabs-shadow fixed-header fixed-sidebar">
+		{{> header}}
+		<div class="app-main">
+			{{> sidebar active_dashboard=true}}
+			<div class="app-main__outer">
+				<div class="app-main__inner">
+					{{> dashboard}}
+				</div>
+				{{> footer}}
+			</div>
+		</div>
+	</div>
+
+	{{> modal_iframe}}
+
+	{{> modal_form}}
+	
+	{{> modal_komentar}}
+
+	{{> js}}
+</body>
+
+</html>

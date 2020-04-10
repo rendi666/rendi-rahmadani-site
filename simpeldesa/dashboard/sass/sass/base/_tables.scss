@@ -1,0 +1,25 @@
+/*--------------------------------------------------------------------------------*/
+/*TABLE*/
+/*--------------------------------------------------------------------------------*/
+table {
+	th, td {
+		vertical-align: top;
+	}
+	thead th {
+	    vertical-align: bottom;
+	    border-bottom: 2px solid lighten($base-color-dark, 70%);
+	}
+	tbody + tbody {
+	    border-top: 2px solid lighten($base-color-dark, 70%);
+	}
+	th {
+		border: 1px solid lighten($base-color-dark, 70%);
+		background: darken($base-color-light, 5%);
+		padding: 10px;
+		text-align: left;
+	}
+	td {
+		border: 1px solid lighten($base-color-dark, 70%);
+		padding: 5px 10px;
+	}
+}

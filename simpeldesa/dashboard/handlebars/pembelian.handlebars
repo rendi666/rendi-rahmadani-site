@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)#home -->
+<html lang="en">
+
+<head>
+    {{> head}}
+
+<body>
+    <div class="app-container app-theme-white body-tabs-shadow fixed-header fixed-sidebar">
+        {{> header active_cart=true}}
+        <div class="app-main">
+            {{> sidebar active_fjb_buy=true}}
+            <div class="app-main__outer">
+                <div class="app-main__inner">
+                    <div class="container mb-5">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="review-block">
+                                    <div class="box box--shadow box--rounded bg-white">
+                                        <div class="tabs p_tabs">
+                                            <a href="#all" class="tabs__item">Semua (20)</a>
+                                            <a href="#1" class="tabs__item">Menunggu Pembayaran (5)</a>
+                                            <a href="#2" class="tabs__item">Menunggu Konfirmasi (1)</a>
+                                            <a href="#3" class="tabs__item">Diproses (1)</a>
+                                            <a href="#4" class="tabs__item">Dikirim (1)</a>
+                                            <a href="#5" class="tabs__item">Sampai (2)</a>
+                                            <a href="#6" class="tabs__item">Selesai (10)</a>
+                                            <a href="#7" class="tabs__item">Dibatalkan (0)</a>
+                                        </div>    
+                                        <div class="tabs-content py-0">
+                                            <div id="all">
+                                                {{> cart_item type="dashboard" channel=WP.Latest total=6 index_start=10 index_end=16}}
+                                            </div>
+                                            <div id="1">
+                                                {{> cart_item type="dashboard" channel=WP.Latest total=1 index_start=1 index_end=5}}
+                                            </div>
+                                            <div id="2">
+                                                {{> cart_item type="dashboard" channel=WP.Latest total=1 index_start=1 index_end=3}}
+                                            </div>
+                                            <div id="3">
+                                                <p class="py-3">Tidak ada data</p>
+                                            </div>
+                                            <div id="4">
+                                                {{> cart_item type="dashboard" channel=WP.Latest total=1 index_start=1 index_end=2}}
+                                            </div>
+                                            <div id="5">
+                                                <p class="py-3">Tidak ada data</p>
+                                            </div>
+                                            <div id="6">
+                                                {{> cart_item type="dashboard" channel=WP.Latest total=1 index_start=1 index_end=2}}
+                                            </div>
+                                            <div id="7">
+                                                {{> cart_item type="dashboard" channel=WP.Latest total=1 index_start=1 index_end=10}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{> footer}}
+            </div>
+        </div>
+    </div>
+
+    {{> modal_iframe}}
+
+    {{> modal_payment}}
+    {{> modal_form}}
+
+    {{> js}}
+    <script src="./assets/js/product.js"></script>
+    <script type="text/javascript">
+        tabs();
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+/*--------------------------------------------------------------------------------*/
+/*IMAGES STYLE*/
+/*--------------------------------------------------------------------------------*/
+%_liquid_bg {
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+%_img-center {
+	position: absolute;
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    max-height: 100%;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    @include transform(translate3d(-50%, -50%, 0));
+}
+
+.img {
+	&-sm {
+		width: 100px;
+	}
+	&-md {
+		width: 200px;
+	}
+	&-lg {
+		width: 400px;
+	}
+	&-fluid {
+		width: 100%;
+	}
+}
+
+.lqd {
+    @extend %_liquid_bg;
+    &_img {
+	    position: absolute;
+	    width: 150%;
+	    height: 150%;
+	    top: -25%;
+	    left: -25%;
+	    z-index: 0;
+	    @include blur-radius(10px);
+	    @extend %_liquid_bg;
+    }
+    &_block {
+    	> img {
+    		@extend %_img-center;
+    	}
+    }
+}

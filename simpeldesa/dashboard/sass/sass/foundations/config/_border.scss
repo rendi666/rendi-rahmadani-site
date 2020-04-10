@@ -1,0 +1,17 @@
+$aula-config: deep-map-merge(
+  (
+    'border': (
+      'width': 1px,
+      'style': solid,
+      'color': $base-color-dark,
+      'radius': (
+        'sm': $base-border-radius,
+        'md': $base-border-radius * 2,
+        'lg': $base-border-radius * 4,
+        'xl': $base-border-radius * 6
+      )
+    )
+  ),
+  $aula-config,
+  true
+);

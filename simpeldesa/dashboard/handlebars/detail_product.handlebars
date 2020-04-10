@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)#home -->
+<html lang="en">
+
+<head>
+    {{> head}}
+
+<body>
+    <div class="app-container app-theme-white body-tabs-shadow fixed-header fixed-sidebar">
+        {{> header active_cart=true}}
+        <div class="app-main">
+            {{> sidebar active_fjb=true}}
+            <div class="app-main__outer">
+                <div class="app-main__inner">
+                    <div class="container mb-5">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="dropdown col-md-3 col-6">
+                                        <button class="btn btn-primary btn-lg dropdown-toggle w-100" type="button"
+                                            id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">
+                                            KATEGORI
+                                        </button>
+                                        <div class="dropdown-menu w-100"
+                                            aria-labelledby="dropdownMenuButton">
+                                            {{> kategori_produk}}
+                                        </div>
+                                    </div>
+                                    <div class="input-group col-md-9 col-6">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon1"><i
+                                                    class="metismenu-icon pe-7s-search"></i></span>
+                                        </div>
+                                        <input type="text" class="form-control" placeholder="Cari berdasarkan nama produk atau merek" aria-label="Username"
+                                            aria-describedby="basic-addon1">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <div class="box">
+                                    <article class="detail">
+                                        <div class="grid-row">
+                                            <div class="column-md-6 column-lg-5 mgb-24">
+                                                <div id="slider-produk" class="slider">
+                                                    <a href="./assets/images/img1.jpg"
+                                                        class="slider__item media media--image-radius" target="_blank">
+                                                        <span class="ratiobox ratiobox--4-3 media__image lqd_block">
+                                                            <img src="./assets/images/img1.jpg" alt="">
+                                                        </span>
+                                                    </a>
+                                                    <a href="./assets/images/img2.jpg"
+                                                        class="slider__item media media--image-radius" target="_blank">
+                                                        <span class="ratiobox ratiobox--4-3 media__image lqd_block">
+                                                            <img src="./assets/images/img2.jpg" alt="">
+                                                        </span>
+                                                    </a>
+                                                    <a href="./assets/images/img3.jpg"
+                                                        class="slider__item media media--image-radius" target="_blank">
+                                                        <span class="ratiobox ratiobox--4-3 media__image lqd_block">
+                                                            <img src="./assets/images/img3.jpg" alt="">
+                                                        </span>
+                                                    </a>
+                                                    <a href="./assets/images/img4.jpg"
+                                                        class="slider__item media media--image-radius" target="_blank">
+                                                        <span class="ratiobox ratiobox--4-3 media__image lqd_block">
+                                                            <img src="./assets/images/img4.jpg" alt="">
+                                                        </span>
+                                                    </a>
+                                                </div>
+
+                                                <div class="slider-nav-wrap">
+                                                    <div id="slider-produk-nav" class="slider slider--nav">
+                                                        <div class="slider__item media media--image-radius">
+                                                            <span class="ratiobox ratiobox--16-9 media__image lqd">
+                                                                <img src="./assets/images/img1.jpg" alt="">
+                                                            </span>
+                                                        </div>
+                                                        <div class="slider__item media media--image-radius">
+                                                            <span class="ratiobox ratiobox--16-9 media__image lqd">
+                                                                <img src="./assets/images/img2.jpg" alt="">
+                                                            </span>
+                                                        </div>
+                                                        <div class="slider__item media media--image-radius">
+                                                            <span class="ratiobox ratiobox--16-9 media__image lqd">
+                                                                <img src="./assets/images/img3.jpg" alt="">
+                                                            </span>
+                                                        </div>
+                                                        <div class="slider__item media media--image-radius">
+                                                            <span class="ratiobox ratiobox--16-9 media__image lqd">
+                                                                <img src="./assets/images/img4.jpg" alt="">
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="column-md-6 column-lg-7 mgb-24">
+                                                <h1 class="detail__title-produk">
+                                                    Beras Cianjur Kualitas Super
+                                                </h1>
+                                                <div class="detail__produk-desc">
+                                                    <p>Beras kualitas Super produksi desa cianjur jawa barat</p>
+                                                </div>
+                                                <div class="detail__produk-price">Rp. <span id="total">170000</span>
+                                                </div>
+                                                <div class="detail__produk-price d-none">Rp. <span
+                                                        id="price">170000</span></div>
+                                                <div class="detail__produk-price-unit row">
+                                                    <div class="col-md-2">
+                                                        <b>Grosir</b>
+                                                    </div>
+                                                    <div class="col-10">
+                                                        Jika Beli Lebih dari 99 = Rp. 100.000
+                                                    </div>
+                                                </div>
+                                                <div class="detail__produk-price-unit row">
+                                                    <div class="col-md-2">
+                                                        <b>Kondisi</b>
+                                                    </div>
+                                                    <div class="col-md-10">
+                                                        Baru
+                                                    </div>
+                                                </div>
+                                                <div class="detail__produk-jumlah">
+                                                    <strong>Masukkan Jumlah</strong> <br>
+                                                    <div class="add-qty">
+                                                        <button type="button" class="btn btn_white qtyminus null"
+                                                            field="quantity">
+                                                            <i class="icon icon-minus"></i>
+                                                        </button>
+                                                        <input type="text" class="add-qty__item" name="quantity"
+                                                            id="num" value="1" onkeyup="calc()">
+                                                        <button type="button" class="btn btn_white qtyplus"
+                                                            field="quantity">
+                                                            <i class="icon icon-plus"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <a href="" class="btn btn-primary btn-lg btn--rounded mr-2">
+                                                    BELI
+                                                </a>
+                                                <a href="" class="btn btn-secondary btn-lg btn--rounded">
+                                                    <i class="icon ion-ios-cart mr-2"></i> MASUKKAN KE KERANJANG
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="box box--shadow box--rounded">
+                                            <div class="tabs">
+                                                <a href="#informasi-produk"
+                                                    class="tabs__item active scrollLink">Deskripsi</a>
+                                                <a href="#ulasan" class="tabs__item scrollLink">Ulasan</a>
+                                                <a href="#diskusi" class="tabs__item scrollLink">Diskusi</a>
+                                            </div>
+                                            <div class="tabs-content">
+                                                <div id="informasi-produk">
+                                                    <p>Harga 1 Set yaitu 1 Botol Pure Candlenut Oil ukuran 100ml + 1
+                                                        Botol Pure
+                                                        Virgin Coconut Oil 200ml</p>
+
+                                                    <p>Botol Kaca, FREE biaya Packing (Plastik, Bubble Wrap dan Dus)</p>
+
+                                                    <p>Untuk Video Cara Pemakaian sudah kami lampirkan</p>
+
+                                                    <p>Solusi perawatan berbagai macam masalah pada rambut dan kulit
+                                                        kepala
+                                                        secara alami</p>
+
+                                                    Peringatan :
+                                                    <ul>
+                                                        <li>Tidak mengandung bahan kimia dan pengawet</li>
+                                                        <li>Aman digunakan untuk segala usia (Bayi-Dewasa), Ibu Hamil
+                                                            dan
+                                                            Menyusui</li>
+                                                    </ul>
+
+                                                    Manfaat :
+                                                    <ul>
+                                                        <li>Melembapkan Rambut</li>
+                                                        <li>Mengurangi kerusakan pada rambut</li>
+                                                        <li>Membuat rambut jadi lebih lembut</li>
+                                                        <li>Penghilang ketombe</li>
+                                                        <li>Merangsang pertumbuhan rambut</li>
+                                                        <li>Menjadikan rambut dan kulit kepala sehat</li>
+                                                        <li>Mencegah kerontokan rambut</li>
+                                                    </ul>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-4" id="ulasan">
+                            <div class="card-header">
+                                Ulasan
+                            </div>
+                            <div class="card-body">
+                                {{> ulasan}}
+                            </div>
+                        </div>
+                        <div class="card mb-4" id="diskusi">
+                            <div class="card-header">
+                                Diskusi
+                            </div>
+                            <div class="card-body">
+                                {{> diskusi product=true}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{> footer}}
+            </div>
+        </div>
+    </div>
+
+    {{> modal_iframe}}
+
+    {{> modal_komentar}}
+    {{> modal_form}}
+
+    {{> js}}
+    <script src="./assets/js/product.js"></script>
+    <script src="./assets/js/slick-lightbox.min.js"></script>
+
+    <script type="text/javascript">
+
+        // INIT SLIDER
+        var $slider = $("#slider-produk");
+        var $slider_nav = $("#slider-produk-nav");
+        var slider_options = {
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            asNavFor: '#slider-produk-nav',
+            fade: true,
+            cssEase: 'linear',
+        }
+        var slider_nav_options = {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            asNavFor: '#slider-produk',
+            focusOnSelect: true,
+        }
+        $slider.slick(slider_options);
+        $slider_nav.slick(slider_nav_options);
+        $slider.slickLightbox();
+
+        //INIT PLUGINS
+        add_quantity();
+        tabs();
+
+    </script>
+
+</body>
+
+</html>

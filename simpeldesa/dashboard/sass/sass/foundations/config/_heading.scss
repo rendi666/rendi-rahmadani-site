@@ -1,0 +1,23 @@
+$aula-config: deep-map-merge(
+  (
+    'heading': (
+      'font': (
+        'weight': 700,
+        'size': (
+          ($base-font-size * 2.5),
+          ($base-font-size * 2),
+          ($base-font-size * 1.75),
+          ($base-font-size * 1.5),
+          ($base-font-size * 1.25),
+          ($base-font-size)
+        )
+      ),
+      'line-height': ($base-line-height),
+      'margin': (
+        'bottom': $base-spacing-y
+      )
+    )
+  ),
+  $aula-config,
+  true
+);

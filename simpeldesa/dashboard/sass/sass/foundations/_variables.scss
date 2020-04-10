@@ -1,0 +1,100 @@
+//--------------------------------------------------------------------------------
+//CONFIG
+//--------------------------------------------------------------------------------
+$base-line-height                     : 1.4 !default;
+$base-border-radius                   : 4px !default;
+
+$base-spacing                         : 4px !default;
+$base-spacing-x                       : $base-spacing * 4 !default;
+$base-spacing-y                       : $base-spacing * 3 !default;
+
+$base-link-color                      : #000 !default;
+$base-hover-color                     : #E5AD58 !default;
+
+$base-font-size                       : 16px !default;
+$base-font-family                     : 'Roboto, Arial, sans-serif' !default;  
+$base-font-family-2                   : 'HelveticaNeue, Arial, sans-serif' !default;
+$base-font-icons                      : 'simpeldesa' !default;  
+
+$config-grid                          : 12 !default;
+$config-grid-gutter                   : 24px !default;
+
+//--------------------------------------------------------------------------------
+//COLORS
+//--------------------------------------------------------------------------------
+// BASE DARK & LIGHT COLORS
+$base-color-dark                      : #000 !default;
+$base-color-light                     : #FFF !default;
+
+// UTILITY COLORS
+$base-color-success                   : #169346 !default;
+$base-color-warning                   : #FFD213 !default;
+$base-color-error                     : #FF0000 !default;
+
+// BRAND COLORS
+$base-color-orange                    : #FA6400 !default;
+$base-color-orange-light              : #E5AD58 !default;
+$base-color-blue                      : #21409A !default;
+$base-color-blue-light                : #3F7BBD !default;
+$base-color-red                       : #FF0000 !default;
+$base-color-red-light                 : #EE4246 !default;
+
+$base-color-orange                    : #E5AD58 !default;
+
+// SOSMED COLORS
+$color-facebook                       : #3C5A99 !default;
+$color-twitter                        : #1DA1F2 !default;
+$color-instagram-yellow               : #FFDC80 !default;
+$color-instagram-red                  : #E1306C !default;
+$color-instagram-blue                 : #5851DB !default;
+$color-youtube                        : #FF0000 !default;
+$color-pinterest                      : #BD081C !default;
+$color-linkedin                       : #0077B5 !default;
+
+//--------------------------------------------------------------------------------
+//RESPONSIVE RATIO BOX
+//--------------------------------------------------------------------------------
+$ratiobox-lists: (
+  16  9       56.25%,
+  4   3       75%,
+  3   4       null, // 133%
+  9   16      null  // 178%
+);
+
+//--------------------------------------------------------------------------------
+//GRID BREAKPOINTS FOR RESPONSIVE UTILITY
+//--------------------------------------------------------------------------------
+$grid_breakpoints: (list: null);
+$grid_breakpoints_between_detikcom: (list: null);
+
+@if $config-responsive-web {
+  $grid_breakpoints: (
+    xs  : 0,
+    sm  : 576px,
+    md  : 768px,
+    lg  : 992px,
+    xl  : 1200px
+  );
+}
+@else {
+  $grid_breakpoints_between_detikcom: (
+    lg  : 1024px,
+    xl  : 1280px
+  );
+}
+
+//--------------------------------------------------------------------------------
+//CONTAINER BREAKPOINTS FOR RESPONSIVE UTILITY
+//--------------------------------------------------------------------------------
+$container_max_widths: (
+  sm  : 540px,
+  md  : 720px,
+  lg  : 960px,
+  xl  : 1080px
+);
+
+
+
+
+
+

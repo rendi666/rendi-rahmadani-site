@@ -1,0 +1,994 @@
+<div class="app-sidebar sidebar-shadow">
+    <div class="app-header__logo">
+        <div class="logo-src"></div>
+        <div class="header__pane ml-auto">
+            <div>
+                <button type="button" class="hamburger close-sidebar-btn hamburger--elastic"
+                    data-class="closed-sidebar">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="app-header__mobile-menu">
+        <div>
+            <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+        </div>
+    </div>
+    <div class="app-header__menu">
+        <span>
+            <button type="button"
+                class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
+                <span class="btn-icon-wrapper">
+                    <i class="fa fa-ellipsis-v fa-w-6"></i>
+                </span>
+            </button>
+        </span>
+    </div>
+    <div class="scrollbar-sidebar ps">
+        <div class="main-card">
+            <div class="card-header">
+                <div class="avatar-icon rounded">
+                    <img src="assets/images/1576238256-5364eb2177fce8ccded7d374d90e085d.png">
+                </div>
+                &nbsp; DESA CISAYONG
+            </div>
+        </div>
+        <div class="app-sidebar__inner">
+
+
+            <ul class="vertical-nav-menu metismenu" id="__main_menu">
+                <li class="app-sidebar__heading">Menu</li>
+
+                <li>
+                    <a href="index.html" aria-expanded="false" class="{{#if active_dashboard}}mm-active{{/if}}">
+                        <i class="metismenu-icon pe-7s-rocket"></i>
+                        Dashboard
+                    </a>
+                </li>
+
+
+
+                <li>
+                    <a href="#info" aria-expanded="false" class="">
+                        <i class="metismenu-icon pe-7s-light"></i>
+                        Info
+                    </a>
+                </li>
+
+                <li class="{{#if active_grafik_berita}}mm-active{{/if}}{{#if active_news_management_1}}mm-active{{/if}} {{#if active_news_management_2}}mm-active{{/if}}">
+                    <a href="#berita" aria-expanded="false" class="">
+                        <i class="metismenu-icon pe-7s-display2"></i>
+                        Berita
+                        <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                    </a>
+                    <ul class="mm-collapse {{#if active_grafik_berita}}mm-show{{/if}} {{#if active_news_management_1}}mm-show{{/if}} {{#if active_news_management_2}}mm-show{{/if}}">
+                        <li>
+                            <a href="./grafik_berita.html" class="{{#if active_grafik_berita}}mm-active{{/if}}">
+                                <i class="metismenu-icon"></i>Grafik Berita
+                            </a>
+                        </li>
+                        <li class="{{#if active_news_management_1}}mm-active{{/if}} {{#if active_news_management_2}}mm-active{{/if}}">
+                            <a href="#" class="{{#if active_news_management_1}}mm-active{{/if}}">
+                                <i class="metismenu-icon"></i>News Management<i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                            </a>
+                            <ul class="mm-collapse {{#if active_news_management_1}}mm-show{{/if}} {{#if active_news_management_2}}mm-show{{/if}}">
+                                <li>
+                                    <a href="./news_management_nasional.html" class="{{#if active_news_management_1}}mm-active{{/if}}">Berita Nasional</a>
+                                </li>
+                                <li>
+                                    <a href="./news_management_desa.html" class="{{#if active_news_management_2}}mm-active{{/if}}">Berita Desa</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#lapor/lapor-pemdes" aria-expanded="false" class="">
+                        <i class="metismenu-icon pe-7s-notebook"></i>
+                        Lapor Pemdes
+                    </a>
+                </li>
+
+                <li class="">
+                    <a href="#home#">
+                        <i class="metismenu-icon pe-7s-graph2"></i>
+                        Grafik
+                        <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                    </a>
+                    <ul class="mm-collapse">
+                        <li>
+                            <a href="#grafik/jenis-kelamin" class="">
+                                <i class="metismenu-icon"></i>Jenis Kelamin
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#grafik/usia" class="">
+                                <i class="metismenu-icon"></i>Usia
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#grafik/pendidikan" class="">
+                                <i class="metismenu-icon"></i>Pendidikan
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#grafik/agama" class="">
+                                <i class="metismenu-icon"></i>Agama
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#grafik/pekerjaan" class="">
+                                <i class="metismenu-icon"></i>Pekerjaan
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#grafik/kewarganegaraan" class="">
+                                <i class="metismenu-icon"></i>Kewarganegaraan
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#grafik/golongan-darah" class="">
+                                <i class="metismenu-icon"></i>Golongan Darah
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#grafik/disabilitas" class="">
+                                <i class="metismenu-icon"></i>Disabilitas
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#grafik/status-perkawinan" class="">
+                                <i class="metismenu-icon"></i>Status Perkawinan
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#grafik/rt-rw" class="">
+                                <i class="metismenu-icon"></i>RT-RW
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li>
+                    <a href="#home#">
+                        <i class="metismenu-icon pe-7s-mail-open-file"></i>
+                        Layanan Surat
+                        <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                    </a>
+                    <ul class="mm-collapse">
+                        <li class="">
+                            <a href="#home#">
+                                Surat Keterangan
+                                <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                            </a>
+                            <ul class="small_menu mm-collapse">
+                                <li>
+                                    <a href="#surat-keterangan-kelahiran" class="">
+                                        <i class="metismenu-icon"></i>Keterangan Kelahiran
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#surat-keterangan-kematian" class="">
+                                        <i class="metismenu-icon"></i>Keterangan Kematian
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#surat-keterangan-status" class="">
+                                        <i class="metismenu-icon"></i>Keterangan Status
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#surat-keterangan-domisili" class="">
+                                        <i class="metismenu-icon"></i>Keterangan Domisili
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#surat-keterangan-domisili-perusahaan" class="">
+                                        <i class="metismenu-icon"></i>Keterangan Domisili Perusahaan
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#surat-keterangan-domisili-organisasi" class="">
+                                        <i class="metismenu-icon"></i>Keterangan Domisili Organisasi
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#surat-keterangan-beda-data" class="">
+                                        <i class="metismenu-icon"></i>Keterangan Beda Data
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a href="#home#">
+                                Surat Pengantar
+                                <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                            </a>
+                            <ul class="small_menu mm-collapse">
+                                <li>
+                                    <a href="#surat-pengantar-kehilangan" class="">
+                                        <i class="metismenu-icon"></i> Pengantar Kehilangan
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#surat-pengantar-bepergian" class="">
+                                        <i class="metismenu-icon"></i> Pengantar Bepergian
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a href="#home#">
+                                Surat Rekomendasi
+                                <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                            </a>
+                            <ul class="small_menu mm-collapse">
+                                <li>
+                                    <a href="#surat-rekomendasi-skck" class="">
+                                        Rekomendasi Catatan Kepolisian
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#surat-rekomendasi-izin-keramaian" class="">
+                                        <i class="metismenu-icon"></i> Rekomendasi Izin Keramaian
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#surat-rekomendasi-ahli-waris" class="">
+                                        <i class="metismenu-icon"></i> Rekomendasi Ahli Waris
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#surat-rekomendasi-usaha" class="">
+                                        <i class="metismenu-icon"></i> Rekomendasi Usaha
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#surat-rekomendasi-tidak-masuk-kerja" class="">
+                                        <i class="metismenu-icon"></i> Rekomendasi Tidak Masuk Kerja
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#surat-rekomendasi-tidak-mampu" class="">
+                                        <i class="metismenu-icon"></i> Rekomendasi Tidak Mampu
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#home#">
+                        <i class="metismenu-icon pe-7s-user"></i>
+                        Perangkat Desa
+                        <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                    </a>
+                    <ul class="mm-collapse">
+                        <li class="">
+                            <a href="#home#">
+                                <i class="metismenu-icon"></i>Sekretaris Desa
+                                <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                            </a>
+                            <ul class="mm-collapse">
+                                <li>
+                                    <a href="#administrasi-peraturan-desa" class="">
+                                        <i class="metismenu-icon"></i>Peraturan Desa
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#administrasi-keputusan-kades" class="">
+                                        <i class="metismenu-icon"></i>Keputusan Kades
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#administrasi-aparat-desa" class="">
+                                        <i class="metismenu-icon"></i>Aparat Desa
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#administrasi-tanah-kas" class="">
+                                        <i class="metismenu-icon"></i>Tanah Kas Desa
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#administrasi-tanah-desa" class="">
+                                        <i class="metismenu-icon"></i>Tanah di Desa
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#administrasi-lembaran-berita" class="">
+                                        <i class="metismenu-icon"></i>Lembaran dan Berita Desa
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a href="#home#">
+                                <i class="metismenu-icon"></i>Kaur Umum dan TU
+                                <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                            </a>
+                            <ul class="mm-collapse">
+                                <li>
+                                    <a href="#administrasi-agenda-desa" class="">
+                                        <i class="metismenu-icon"></i>Agenda Desa
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#administrasi-ekspedisi" class="">
+                                        <i class="metismenu-icon"></i>Ekspedisi
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#administrasi-inventaris" class="">
+                                        <i class="metismenu-icon"></i>Inventaris dan Kekayaan Desa
+                                    </a>
+                                </li>
+
+                                <!-- <li>
+                                    <a href="#">
+                                        <i class="metismenu-icon"></i>Kekayaan dan Asset
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="metismenu-icon"></i>Notulen Musyawarah
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="metismenu-icon"></i>Presensi Musyawarah
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="metismenu-icon"></i>Register Surat
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="metismenu-icon"></i>Disposisi
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="metismenu-icon"></i>Presensi Dinas
+                                    </a>
+                                </li> -->
+                            </ul>
+                        </li>
+                        <!-- <li>
+                            <a href="#">
+                                <i class="metismenu-icon"></i>Kaur Keuangan
+                                <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="metismenu-icon"></i>Kas Umum
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="metismenu-icon"></i>Kas Pembantu
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="metismenu-icon"></i>Bank Desa
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="metismenu-icon"></i>Kas Pemb. Kegiatan
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="metismenu-icon"></i>Siltaf, Tunj & Perjalanan
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="metismenu-icon"></i>Insentif & Tunj BPD
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="metismenu-icon"></i>Honorarium
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="metismenu-icon"></i>Dokumen SPJ
+                                    </a>
+                                </li>
+                            </ul>
+                        </li> -->
+
+                        <li class="">
+                            <a href="#home#">
+                                <i class="metismenu-icon"></i>Kaur Perencanaan
+                                <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                            </a>
+                            <ul class="mm-collapse">
+                                <li>
+                                    <a href="#administrasi-rkpdes" class="">
+                                        <i class="metismenu-icon"></i>RKPDes
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#administrasi-kegpem" class="">
+                                        <i class="metismenu-icon"></i>Keg. Pembangunan
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#administrasi-invpem" class="">
+                                        <i class="metismenu-icon"></i>Inventaris Pembangunan
+                                    </a>
+                                </li>
+
+                                <!-- <li>
+                                    <a href="#">
+                                        <i class="metismenu-icon"></i>RKPDes
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="metismenu-icon"></i>APBDes
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="metismenu-icon"></i>Rencana Biaya
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <i class="metismenu-icon"></i>Data Hasil Pembangunan
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="metismenu-icon"></i>Dok Renc. Kegiatan
+                                    </a>
+                                </li> -->
+                            </ul>
+                        </li>
+
+                        <li class="">
+                            <a href="#home#">
+                                <i class="metismenu-icon"></i>Kasi Pemerintahan
+                                <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+
+                            </a>
+                            <ul class="mm-collapse">
+                                <li>
+                                    <a href="#administrasi-induk-penduduk" class="">
+                                        <i class="metismenu-icon"></i>Induk Penduduk
+                                    </a>
+                                </li>
+
+                                <!-- <li>
+                                    <a href="#">
+                                        <i class="metismenu-icon"></i>Mutasi Penduduk
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="metismenu-icon"></i>Rek. Jumlah Penduduk
+                                    </a>
+                                </li> -->
+
+                                <li>
+                                    <a href="#administrasi-kk-ktp-penduduk" class="">
+                                        <i class="metismenu-icon"></i>Data KK dan KTP
+                                    </a>
+                                </li>
+
+                                <!-- <li>
+                                    <a href="#">
+                                        <i class="metismenu-icon"></i>Siskamling
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="metismenu-icon"></i>Catatan Kejadian
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="metismenu-icon"></i>Keramainan
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="metismenu-icon"></i>Kegiatan LH
+                                    </a>
+                                </li> -->
+                            </ul>
+                        </li>
+
+
+
+                        <li class="">
+                            <a href="#home#">
+                                <i class="metismenu-icon"></i>Kasi Kesejahtraan
+                                <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                            </a>
+                            <ul class="mm-collapse">
+                                <li>
+                                    <a href="#administrasi-kegpemberdayaan" class="">
+                                        <i class="metismenu-icon"></i>Keg. Pemberdayaan
+                                    </a>
+                                </li>
+                                <!--
+                                <li>
+                                    <a href="#">
+                                        <i class="metismenu-icon"></i>Keg. Pelatihan
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="metismenu-icon"></i>Keg. Kelompok Usaha
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="metismenu-icon"></i>Keg. Gapoktan
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="metismenu-icon"></i>Keg. LPM
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="metismenu-icon"></i>Keg. PKK
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="metismenu-icon"></i>Keg. Karang Taruna
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="metismenu-icon"></i>Keg. Linmas
+                                    </a>
+                                </li>
+                                    -->
+                            </ul>
+                        </li>
+
+
+                        <!--
+                        <li>
+                            <a href="#">
+                                <i class="metismenu-icon"></i>Kasi Pelayanan
+                                <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="metismenu-icon"></i>Data LKD
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="metismenu-icon"></i>Data Lembaga Pelatihan
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="metismenu-icon"></i>Data Ormas dan Orpol
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="metismenu-icon"></i>Data OKP
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="metismenu-icon"></i>Data LSM
+                                    </a>
+                                </li>
+                            </ul>
+                        </li> -->
+                    </ul>
+                </li>
+                <!-- <li>
+                    <a href="#">
+                        <i class="metismenu-icon pe-7s-note2"></i>
+                        Layanan PBB
+                    </a>
+                </li> -->
+
+
+                <!-- <li>
+                    <a href="#">
+                        <i class="metismenu-icon pe-7s-menu"></i>
+                        Musdes
+                    </a>
+                </li> -->
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- <li>
+                    <a href="#">
+                        <i class="metismenu-icon pe-7s-shopbag"></i>
+                        BUMDesa
+                        <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="metismenu-icon"></i>Marketplace
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="metismenu-icon"></i>Simple-Jek
+                                <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="metismenu-icon"></i>Ojek Desa
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="metismenu-icon"></i>Makanan
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="metismenu-icon"></i>Pijat
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="metismenu-icon"></i>Servis
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="metismenu-icon"></i>Tukang
+                                    </a>
+                                </li>
+                            </ul>
+
+
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="metismenu-icon"></i>PPOB
+                                <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="metismenu-icon"></i>Listrik
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="metismenu-icon"></i>PDAM
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="metismenu-icon"></i>Asuransi
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="metismenu-icon"></i>BPJS
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="metismenu-icon"></i>Multifinance
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="metismenu-icon"></i>Pulsa
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="metismenu-icon"></i>Grosdes
+                                <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="metismenu-icon"></i>Sembako
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="metismenu-icon"></i>Alat Sekolah
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="metismenu-icon"></i>Fashion
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="metismenu-icon"></i>Keb. Rumah Tangga
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="metismenu-icon"></i>Iklan
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="metismenu-icon"></i>Administrasi
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="metismenu-icon"></i>Kas BUMDesa
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="metismenu-icon"></i>Unit Usaha
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="metismenu-icon"></i>Struktur
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="metismenu-icon"></i>Neraca
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="metismenu-icon"></i>Laporan Bumdesa
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="metismenu-icon"></i>Data Potensi
+                            </a>
+                        </li>
+                    </ul>
+                </li> -->
+
+                <li class="{{#if active_grosir}}mm-active{{/if}}{{#if active_grosir_order}}mm-active{{/if}}{{#if active_grosir_report}}mm-active{{/if}}">
+                    <a href="#home#">
+                        <i class="metismenu-icon pe-7s-cart"></i>
+                        Grosir Desa
+                        <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                    </a>
+                    <ul class="mm-collapse {{#if active_grosir}}mm-show{{/if}}{{#if active_grosir_order}}mm-show{{/if}}">
+
+                        <li>
+                            <a href="./grosir_product.html" class="{{#if active_grosir}}mm-active{{/if}}">
+                                <i class="metismenu-icon"></i>Data Produk
+                            </a>
+                        </li>
+                        <li class="{{#if active_grosir_order}}mm-show{{/if}}">
+                            <a href="./data_order.html" class="{{#if active_grosir_order}}mm-active{{/if}}">
+                                <i class="metismenu-icon"></i>Data Order
+                            </a>
+                        </li>
+                        <li class="{{#if active_grosir_report}}mm-show{{/if}}">
+                            <a href="./report_grosir.html" class="{{#if active_grosir_report}}mm-active{{/if}}">
+                                <i class="metismenu-icon"></i>Laporan Grosir Desa
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="{{#if active_pasar_desa}}mm-active{{/if}}{{#if active_pasdes_report}}mm-active{{/if}}">
+                    <a href="#home#">
+                        <i class="metismenu-icon pe-7s-cart"></i>
+                        Pasar Desa
+                        <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                    </a>
+                    <ul class="mm-collapse">
+                        <li>
+                            <a href="#pasar-produk" class="">
+                                <i class="metismenu-icon"></i>Data Produk
+                            </a>
+                        </li>
+                        <li class="{{#if active_pasdes_report}}mm-show{{/if}}">
+                            <a href="./report_pasar_desa.html" class="{{#if active_pasdes_report}}mm-active{{/if}}">
+                                <i class="metismenu-icon"></i>Laporan Pasar Desa
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="{{#if active_butuh_darah}}mm-active{{/if}}">
+                    <a href="#home#">
+                        <i class="metismenu-icon pe-7s-drop"></i>
+                        Simpel Donor
+                        <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                    </a>
+                    <ul class="mm-collapse">
+                        <li>
+                            <a href="#blood-provider" class="">
+                                <i class="metismenu-icon"></i>Provider Darah
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#blood-stock" class="">
+                                <i class="metismenu-icon"></i>Stock Darah
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#donor-schedule" class="">
+                                <i class="metismenu-icon"></i>Jadwal Donor
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#blood-donor" class="">
+                                <i class="metismenu-icon"></i>Pendonor
+                            </a>
+                        </li>
+                        <li class="{{#if active_butuh_darah}}mm-show{{/if}}">
+                            <a href="./butuh_darah.html" class="{{#if active_butuh_darah}}mm-active{{/if}}">
+                                <i class="metismenu-icon"></i>Butuh Darah
+                            </a>
+                        </li>
+                        <li class="{{#if active_report_donor}}mm-show{{/if}}">
+                            <a href="./report_donor.html" class="{{#if active_report_donor}}mm-active{{/if}}">
+                                <i class="metismenu-icon"></i>Report
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="{{#if active_donatur}}mm-active{{/if}}">
+                    <a href="#home">
+                        <i class="metismenu-icon pe-7s-cash"></i>
+                        Simpel Donasi
+                        <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                    </a>
+                    <ul class="mm-collapse">
+                        <li>
+                            <a href="#donation-category" class="">
+                                <i class="metismenu-icon"></i>Kategori
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#donation-info" class="">
+                                <i class="metismenu-icon"></i>Informasi
+                            </a>
+                        </li>
+                        <li class="{{#if active_donatur}}mm-show{{/if}}">
+                            <a href="./data_donasi.html" class="{{#if active_donatur}}mm-active{{/if}}">
+                                <i class="metismenu-icon"></i>Donatur
+                            </a>
+                        </li>
+                        <!-- <li>
+                            <a href="#donation-report" class="">
+                                <i class="metismenu-icon"></i>Report
+                            </a>
+                        </li> -->
+                    </ul>
+                </li>
+
+                <li class="{{#if active_forum_kades}}mm-active{{/if}}">
+                    <a href="./forum_kades.html">
+                        <i class="metismenu-icon pe-7s-chat"></i>
+                        Simpel Forum
+                        <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                    </a>
+                    <ul class="mm-collapse {{#if active_forum_kades}}mm-show{{/if}} {{#if active_fjb}}mm-show{{/if}}">
+                        <li>
+                            <a href="./forum_kades.html" class="{{#if active_forum_kades}}mm-active{{/if}}">
+                                <i class="metismenu-icon"></i>Forum Kepala Desa
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./forum_kades.html" class="{{#if active_fjb}}mm-active{{/if}}">
+                                <i class="metismenu-icon"></i>Forum BPD
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./forum_kades.html" class="{{#if active_fjb}}mm-active{{/if}}">
+                                <i class="metismenu-icon"></i>Forum BUMDesa
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./forum_kades.html" class="{{#if active_fjb}}mm-active{{/if}}">
+                                <i class="metismenu-icon"></i>Forum Prades
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./forum_kades.html" class="{{#if active_fjb}}mm-active{{/if}}">
+                                <i class="metismenu-icon"></i>Forum Lembaga Desa
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="{{#if active_fjb}}mm-active{{/if}}{{#if active_fjb_buy}}mm-active{{/if}}">
+                    <a href="#">
+                        <i class="metismenu-icon pe-7s-cart"></i>
+                        Forum Jual Beli
+                        <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                    </a>
+                    <ul class="mm-collapse {{#if active_fjb}}mm-show{{/if}} {{#if active_fjb_buy}}mm-show{{/if}}">
+                        <li>
+                            <a href="./fjb.html" class="{{#if active_fjb}}mm-active{{/if}}">
+                                <i class="metismenu-icon"></i>FJB Bumdes
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./pembelian.html" class="{{#if active_fjb_buy}}mm-active{{/if}}">
+                                <i class="metismenu-icon"></i>Status Pembelian
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
+            <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+        </div>
+        <div class="ps__rail-y" style="top: 0px; right: 0px;">
+            <div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div>
+        </div>
+    </div>
+</div>

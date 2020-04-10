@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)#home -->
+<html lang="en">
+
+<head>
+	{{> head}}
+<body>
+	<div class="app-container app-theme-white body-tabs-shadow fixed-header fixed-sidebar">
+		{{> header}}
+		<div class="app-main">
+			{{> sidebar active_grosir_report=true}}
+			<div class="app-main__outer">
+				<div class="app-main__inner">
+                    <div class="review-block">
+                        <div class="row">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="widget-chart widget-chart2 text-left mb-3 card-btm-border card-shadow-primary bg-primary text-white card">
+                                    <div class="widget-chat-wrapper-outer">
+                                        <div class="widget-chart-content">
+                                            <div class="widget-title opacity-5 text-uppercase">Pendapatan Kotor</div>
+                                            <div class="widget-numbers mt-2 fsize-3 mb-0 w-100">
+                                                <div class="widget-chart-flex align-items-center">
+                                                    <div>
+                                                        <i class="lnr-arrow-down mr-2 opacity-7 btn-icon-wrapper mb-2">
+                                                        </i>
+                                                        Rp. 170.000.000 </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="widget-chart widget-chart2 text-left mb-3 card-btm-border card-shadow-primary bg-secondary text-white card">
+                                    <div class="widget-chat-wrapper-outer">
+                                        <div class="widget-chart-content">
+                                            <div class="widget-title opacity-5 text-uppercase">Pendapatan Bersih</div>
+                                            <div class="widget-numbers mt-2 fsize-3 mb-0 w-100">
+                                                <div class="widget-chart-flex align-items-center">
+                                                    <div>
+                                                        <i class="lnr-arrow-down mr-2 opacity-7 btn-icon-wrapper mb-2">
+                                                        </i>
+                                                        Rp. 170.000.000 </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="widget-chart widget-chart2 text-left mb-3 card-btm-border card-shadow-warning bg-warning text-black-50 card">
+                                    <div class="widget-chat-wrapper-outer">
+                                        <div class="widget-chart-content">
+                                            <div class="widget-title opacity-5 text-uppercase">Tingkat Konversi</div>
+                                            <div class="widget-numbers mt-2 fsize-3 mb-0 w-100">
+                                                <div class="widget-chart-flex align-items-center">
+                                                    <div>
+                                                        <i class="lnr-chart-bars opacity-7 btn-icon-wrapper mb-2">
+                                                        </i>
+                                                        50%
+                                                    </div>
+                        
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="widget-chart widget-chart2 text-left mb-3 card-btm-border card-shadow-danger card">
+                                    <div class="widget-chat-wrapper-outer">
+                                        <div class="widget-chart-content">
+                                            <div class="widget-title opacity-5 text-uppercase">Total Produk</div>
+                                            <div class="widget-numbers mt-2 fsize-3 mb-0 w-100">
+                                                <div class="widget-chart-flex align-items-center">
+                                                    <div>
+                                                        <i class="lnr-plus-circle opacity-7 btn-icon-wrapper mb-2">
+                                                        </i>
+                                                        585 </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="widget-chart widget-chart2 text-left mb-3 card-btm-border card-shadow-danger bg-danger text-white card">
+                                    <div class="widget-chat-wrapper-outer">
+                                        <div class="widget-chart-content">
+                                            <div class="widget-title opacity-5 text-uppercase">Produk Dilihat</div>
+                                            <div class="widget-numbers mt-2 fsize-3 mb-0 w-100">
+                                                <div class="widget-chart-flex align-items-center">
+                                                    <div>
+                                                        <i class="lnr-eye opacity-7 btn-icon-wrapper mb-2">
+                                                        </i>
+                                                        585 </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="widget-chart widget-chart2 text-left mb-3 card-btm-border card-shadow-success bg-success text-white card">
+                                    <div class="widget-chat-wrapper-outer">
+                                        <div class="widget-chart-content">
+                                            <div class="widget-title opacity-5 text-uppercase">Produk Terjual</div>
+                                            <div class="widget-numbers mt-2 fsize-3 mb-0 w-100">
+                                                <div class="widget-chart-flex align-items-center">
+                                                    <div>
+                                                        <i class="lnr-cart opacity-7 btn-icon-wrapper mb-2">
+                                                        </i>
+                        
+                                                        30 </div>
+                        
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <div class="col-md-9 col-6">Data Produk</div>
+                                <div class="col-md-3 col-6">
+                                    <div class="dataTables_length mr-4" id="table_length">
+                                        <select name="table_length" aria-controls="table" class="custom-select custom-select-sm form-control form-control-sm">
+                                            <option value="10">30 Hari Terakhir</option>
+                                            <option value="25">1 Bulan Terakhir</option>
+                                            <option value="50">1 Tahun Terakhir</option>
+                                            <option value="100">Terbanyak Gagal</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <canvas id="chart-area" style="background: rgb(255, 255, 255); padding: 15px; display: block; height: 650px; width: 1300px;" width="2600" height="1300" class="chartjs-render-monitor"></canvas>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-6 col-12">
+                                <div class="card">
+                                    <div class="border-bottom p-3">
+                                        <h6 class="mb-0">PRODUK TERLARIS</h6>
+                                        <div class="dataTables_length mr-4 mt-3" id="table_length">
+                                            <select name="table_length" aria-controls="table" class="custom-select custom-select-sm form-control form-control-sm">
+                                                <option value="10">30 Hari Terakhir</option>
+                                                <option value="25">1 Bulan Terakhir</option>
+                                                <option value="50">1 Tahun Terakhir</option>
+                                                <option value="100">Terbanyak Gagal</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        {{> cart_item type="simple" channel=WP.Latest total=6 index_start=1 index_end=6}}
+                                        <button class="btn btn-primary w-100" data-toggle="modal" data-target="#modal-produk-terlaris">LIHAT SEMUA</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-12">
+                                <div class="card">
+                                    <div class="border-bottom p-3">
+                                        <h6 class="mb-0">PRODUK PALING DIMINATI</h6>
+                                        <div class="dataTables_length mr-4 mt-3" id="table_length">
+                                            <select name="table_length" aria-controls="table" class="custom-select custom-select-sm form-control form-control-sm">
+                                                <option value="10">30 Hari Terakhir</option>
+                                                <option value="25">1 Bulan Terakhir</option>
+                                                <option value="50">1 Tahun Terakhir</option>
+                                                <option value="100">Terbanyak Gagal</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        {{> cart_item type="simple" channel=WP.Latest total=6 index_start=1 index_end=6}}
+                                        <button class="btn btn-primary w-100" data-toggle="modal" data-target="#modal-produk-minat">LIHAT SEMUA</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <div class="col-md-6 px-0 mb-3 mb-md-0">
+                                    Data Pembeli
+                                </div>
+                            </div>
+                            <div class="card-body p-0">
+                                <div class="row no-gutter">
+                                    <div class="col-md-3 col-12 p-0 border-right">
+                                        <div class="bg-primary text-white p-4">
+                                            <p class="mb-1">Jumlah Pembeli</p>
+                                            <h1>500</h1>
+                                        </div>
+                                        <div class="bg-white p-4 border-bottom">
+                                            <div class="row">
+                                                <div class="col-3">
+                                                    <div class="svg-width">
+                                                        <svg height="512pt" viewBox="-110 0 512 512.00328" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m291.59375 288.230469-38.324219-137.585938-.027343.007813c-7.191407-24.226563-29.613282-41.902344-56.175782-41.902344h-101.839844c-26.5625 0-48.984374 17.675781-56.175781 41.902344l-.027343-.007813-38.324219 137.589844c-2.796875 10.03125 3.070312 20.425781 13.101562 23.222656 10.03125 2.792969 20.429688-3.074219 23.222657-13.105469l34.371093-123.386718c1.253907-4.5 5.355469-7.617188 10.027344-7.617188 6.800781 0 11.777344 6.417969 10.082031 13.007813l-36.769531 142.933593-5.886719 22.886719c-.8125 3.164063 1.574219 6.246094 4.84375 6.246094h41.160156v140.273437c0 10.222657 7.949219 18.929688 18.167969 19.296876 10.722657.382812 19.539063-8.203126 19.539063-18.84375v-140.726563h27.175781v140.722656c0 10.414063 8.441406 18.855469 18.851563 18.855469 10.414062 0 18.855468-8.441406 18.855468-18.855469v-140.722656h41.160156c3.265626 0 5.65625-3.085937 4.84375-6.25l-5.886718-22.886719-36.773438-142.933594c-1.691406-6.585937 3.28125-13.003906 10.085938-13.003906 4.671875 0 8.773437 3.113282 10.027344 7.617188l34.367187 123.382812c2.796875 10.03125 13.191406 15.898438 23.222656 13.101563 10.03125-2.792969 15.898438-13.191407 13.105469-23.21875zm0 0" fill="#ff94d4"/><path d="m196.054688 49.910156c0 27.5625-22.34375 49.90625-49.90625 49.90625-27.566407 0-49.910157-22.34375-49.910157-49.90625 0-27.566406 22.34375-49.910156 49.910157-49.910156 27.5625 0 49.90625 22.34375 49.90625 49.910156zm0 0" fill="#ff94d4"/><g fill="#ff73c6"><path d="m146.148438 0c-3.648438 0-7.199219.402344-10.621094 1.144531 22.460937 4.867188 39.289062 24.847657 39.289062 48.765625 0 23.917969-16.828125 43.894532-39.289062 48.761719 3.421875.746094 6.972656 1.144531 10.621094 1.144531 27.5625 0 49.90625-22.34375 49.90625-49.90625 0-27.566406-22.34375-49.910156-49.90625-49.910156zm0 0"/><path d="m71.394531 174.964844c1.253907-4.503906 5.355469-7.617188 10.027344-7.617188h-18.714844c-4.675781 0-8.777343 3.113282-10.03125 7.617188l-34.367187 123.386718c-1.386719 4.972657-4.644532 8.914063-8.792969 11.292969 1.324219.757813 2.75 1.382813 4.285156 1.808594 10.03125 2.796875 20.429688-3.070313 23.222657-13.101563zm0 0"/><path d="m291.59375 288.230469-38.324219-137.585938-.027343.007813c-7.191407-24.226563-29.613282-41.902344-56.171876-41.902344h-18.71875c26.5625 0 48.984376 17.675781 56.171876 41.902344l.03125-.007813 38.324218 137.585938c2.367188 8.492187-1.492187 17.230469-8.820312 21.410156 4.222656 2.421875 9.375 3.21875 14.433594 1.808594 10.027343-2.792969 15.894531-13.191407 13.101562-23.21875zm0 0"/><path d="m113.84375 493.144531c0 6.988281-3.8125 13.066407-9.457031 16.324219 2.550781 1.496094 5.480469 2.40625 8.628906 2.519531 10.726563.382813 19.542969-8.199219 19.542969-18.84375v-140.722656h-13.515625c-2.871094 0-5.199219 2.328125-5.199219 5.199219zm0 0"/><path d="m178.726562 493.144531c0 7.003907-3.828124 13.105469-9.496093 16.355469 2.757812 1.582031 5.949219 2.5 9.359375 2.5 10.410156 0 18.851562-8.441406 18.851562-18.851562v-140.726563h-13.515625c-2.871093 0-5.199219 2.328125-5.199219 5.199219zm0 0"/><path d="m200.789062 180.351562c-1.695312-6.585937 3.277344-13.003906 10.082032-13.003906h-18.71875c-6.800782 0-11.777344 6.417969-10.082032 13.003906l44.265626 172.070313h12.265624c3.269532 0 5.65625-3.085937 4.84375-6.25zm0 0"/></g></svg>
+                                                    </div>
+                                                    <h6 class="text-center mt-2">54%</h6>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="progress bg-blue-light">
+                                                        <div class="progress-bar bg-pink" role="progressbar" style="width: 54%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-3">
+                                                    <div class="svg-width">
+                                                        <svg height="512pt" viewBox="-146 0 512 512.00026" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m159.535156 49.886719c0 27.550781-22.332031 49.886719-49.886718 49.886719-27.550782 0-49.882813-22.335938-49.882813-49.886719s22.332031-49.886719 49.882813-49.886719c27.554687 0 49.886718 22.335938 49.886718 49.886719zm0 0" fill="#8bcaff"/><path d="m109.648438 0c-3.640626 0-7.191407.402344-10.613282 1.144531 22.449219 4.867188 39.269532 24.835938 39.269532 48.742188s-16.820313 43.875-39.269532 48.742187c3.421875.742188 6.96875 1.144532 10.613282 1.144532 27.550781 0 49.886718-22.335938 49.886718-49.886719s-22.335937-49.886719-49.886718-49.886719zm0 0" fill="#60b8ff"/><path d="m160.632812 108.273438h-101.964843c-32.402344 0-58.667969 26.269531-58.667969 58.667968v125.644532c0 10.234374 7.960938 18.949218 18.1875 19.3125 10.738281.382812 19.566406-8.210938 19.566406-18.863282v-115.820312c0-5.671875 4.597656-10.273438 10.269532-10.273438 5.671874 0 10.269531 4.597656 10.269531 10.273438v315.457031c0 10.234375 7.960937 18.953125 18.1875 19.316406 10.742187.378907 19.566406-8.210937 19.566406-18.867187v-136.65625c0-7.511719 6.089844-13.601563 13.601563-13.601563 7.515624 0 13.605468 6.089844 13.605468 13.601563v136.65625c0 10.425781 8.449219 18.878906 18.875 18.878906 10.425782 0 18.875-8.453125 18.875-18.878906v-315.90625c0-5.675782 4.597656-10.273438 10.269532-10.273438 5.671874 0 10.273437 4.597656 10.273437 10.273438v115.820312c0 10.425782 8.449219 18.875 18.875 18.875s18.875-8.449218 18.875-18.875v-126.09375c.003906-32.402344-26.265625-58.667968-58.664063-58.667968zm0 0" fill="#8bcaff"/><g fill="#60b8ff"><path d="m77.308594 358.480469v134.644531c0 6.992188-3.816406 13.078125-9.46875 16.339844.402344.238281.816406.453125 1.234375.660156.164062.078125.328125.15625.492187.230469.441406.199219.882813.386719 1.339844.550781.117188.042969.234375.078125.351562.117188.414063.140624.835938.265624 1.261719.378906.121094.03125.242188.066406.367188.09375.507812.121094 1.023437.21875 1.550781.296875.117188.019531.238281.03125.359375.050781.554687.070312 1.117187.125 1.683594.144531 5.371093.191407 10.261719-1.863281 13.808593-5.292969 2.664063-2.574218 4.570313-5.925781 5.355469-9.6875.261719-1.253906.402344-2.550781.402344-3.882812v-136.660156c0-7.511719 6.089844-13.601563 13.601563-13.601563h-16.726563c-8.621094 0-15.613281 6.992188-15.613281 15.617188zm0 0"/><path d="m142.265625 182.558594v310.5625c0 7.015625-3.832031 13.117187-9.503906 16.375.296875.171875.601562.328125.910156.484375.125.0625.25.121093.375.179687.460937.222656.929687.421875 1.410156.601563.238281.09375.476563.183593.722657.265625.238281.082031.484374.152344.726562.222656.347656.101562.699219.191406 1.054688.273438.171874.039062.34375.082031.515624.117187.492188.09375.992188.167969 1.496094.226563.152344.019531.308594.03125.460938.046874.558594.050782 1.125.085938 1.695312.085938 5.863282 0 11.105469-2.675781 14.566406-6.867188.769532-.933593 1.453126-1.941406 2.03125-3.011718.292969-.535156.558594-1.085938.796876-1.648438.714843-1.695312 1.191406-3.515625 1.386718-5.417968.0625-.636719.097656-1.28125.097656-1.933594v-315.90625c0-5.675782 4.597657-10.273438 10.269532-10.273438h-13.394532c-8.625 0-15.617187 6.992188-15.617187 15.617188zm0 0"/><path d="m48.023438 166.941406c-5.671876 0-10.269532 4.597656-10.269532 10.273438v115.820312c0 10.65625-8.828125 19.246094-19.566406 18.867188-.570312-.019532-1.128906-.078125-1.683594-.148438-.121094-.015625-.242187-.03125-.359375-.046875-.527343-.078125-1.042969-.175781-1.554687-.296875-.121094-.03125-.238282-.066406-.359375-.097656-.429688-.109375-.851563-.238281-1.265625-.375-.117188-.042969-.238282-.074219-.351563-.117188-.457031-.164062-.898437-.351562-1.339843-.550781-.164063-.074219-.328126-.152343-.492188-.234375-.417969-.203125-.832031-.421875-1.234375-.65625 5.652344-3.261718 9.46875-9.347656 9.46875-16.34375v-110.476562c0-8.625 6.992187-15.617188 15.613281-15.617188zm0 0"/><path d="m160.632812 108.273438h-18.738281c32.398438 0 58.667969 26.269531 58.667969 58.667968v126.09375c0 7.015625-3.832031 13.117188-9.507812 16.375 2.761718 1.582032 5.957031 2.503906 9.367187 2.503906 10.425781 0 18.878906-8.453124 18.878906-18.878906v-126.09375c0-32.402344-26.269531-58.667968-58.667969-58.667968zm0 0"/></g></svg>
+                                                    </div>
+                                                    <h6 class="text-center mt-2">46%</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bg-white">
+                                            <div class="row no-gutter border-top p-3">
+                                                <div class="col-8">
+                                                    > 17 Tahun
+                                                </div>
+                                                <div class="col-4 text-right">
+                                                    <h6 class="mb-0">0%</h6>
+                                                </div>
+                                            </div>
+                                            <div class="row no-gutter border-top p-3">
+                                                <div class="col-8">
+                                                    18 - 23 Tahun
+                                                </div>
+                                                <div class="col-4 text-right">
+                                                    <h6 class="mb-0">1%</h6>
+                                                </div>
+                                            </div>
+                                            <div class="row no-gutter border-top p-3">
+                                                <div class="col-8">
+                                                    23 - 35 Tahun
+                                                </div>
+                                                <div class="col-4 text-right">
+                                                    <h6 class="mb-0">1%</h6>
+                                                </div>
+                                            </div>
+                                            <div class="row no-gutter border-top p-3">
+                                                <div class="col-8">
+                                                    35 - 50 Tahun
+                                                </div>
+                                                <div class="col-4 text-right">
+                                                    <h6 class="mb-0">50%</h6>
+                                                </div>
+                                            </div>
+                                            <div class="row no-gutter border-top p-3">
+                                                <div class="col-8">
+                                                    > 50 Tahun
+                                                </div>
+                                                <div class="col-4 text-right">
+                                                    <h6 class="mb-0">50%</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-9 col-12 p-0 mb-3 row no-gutter">
+                                        <div class="col-12 px-0">
+                                            <div class="border-bottom bg-light">
+                                                <div class="card-header">
+                                                    Pelanggan Teratas
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6 col-12">
+                                                        <div class="row no-gutter py-3">
+                                                            <div class="col-md-5 mb-2">
+                                                                <span class="ratiobox lqd">
+                                                                    <img src="./assets/images/img5.jpg" alt="">
+                                                                </span>
+                                                            </div>
+                                                            <div class="col-md-7">
+                                                                <p class="mb-1"><b>Atta Halilintar</b></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-12 py-3">
+                                                        <div class="mb-2">
+                                                            <h4 class="text-success mb-0">100%</h4>
+                                                            <p>Dari Total Transaksi</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="border-top">
+                                                <div class="row">
+                                                    <div class="col-md-5 col-12">
+                                                        
+                                                    </div>
+                                                    <div class="col-md-4 col-6 py-3">
+                                                        <div class="mb-2">
+                                                            <h6 class="mb-0">Pembelian</h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3 col-6 py-3">
+                                                        <div class="mb-2">
+                                                            <h6 class="mb-0 text-center">Transaksi</h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="border-top">
+                                                <div class="row">
+                                                    <div class="col-md-5 col-12">
+                                                        <div class="row no-gutter py-3">
+                                                            <div class="col-md-4 mb-2">
+                                                                <span class="ratiobox lqd">
+                                                                    <img src="./assets/images/img5.jpg" alt="">
+                                                                </span>
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                <p class="mb-1"><b>Atta Halilintar</b></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 col-6 py-3">
+                                                        <div class="mb-2">
+                                                            <h6 class="text-primary">Rp. 6.700.000</h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3 col-6 py-3">
+                                                        <div class="mb-2">
+                                                            <h6 class="text-danger text-center">1</h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="border-top">
+                                                <div class="row">
+                                                    <div class="col-md-5 col-12">
+                                                        <div class="row no-gutter py-3">
+                                                            <div class="col-md-4 mb-2">
+                                                                <span class="ratiobox lqd">
+                                                                    <img src="./assets/images/img5.jpg" alt="">
+                                                                </span>
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                <p class="mb-1"><b>Atta Halilintar</b></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 col-6 py-3">
+                                                        <div class="mb-2">
+                                                            <h6 class="text-primary">Rp. 116.700.000</h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3 col-6 py-3">
+                                                        <div class="mb-2">
+                                                            <h6 class="text-danger text-center">1</h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="border-top">
+                                                <div class="row">
+                                                    <div class="col-md-5 col-12">
+                                                        <div class="row no-gutter py-3">
+                                                            <div class="col-md-4 mb-2">
+                                                                <span class="ratiobox lqd">
+                                                                    <img src="./assets/images/img5.jpg" alt="">
+                                                                </span>
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                <p class="mb-1"><b>Atta Halilintar</b></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 col-6 py-3">
+                                                        <div class="mb-2">
+                                                            <h6 class="text-primary">Rp. 116.700.000</h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3 col-6 py-3">
+                                                        <div class="mb-2">
+                                                            <h6 class="text-danger text-center">1</h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="border-top">
+                                                <div class="row">
+                                                    <div class="col-md-5 col-12">
+                                                        <div class="row no-gutter py-3">
+                                                            <div class="col-md-4 mb-2">
+                                                                <span class="ratiobox lqd">
+                                                                    <img src="./assets/images/img5.jpg" alt="">
+                                                                </span>
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                <p class="mb-1"><b>Atta Halilintar</b></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 col-6 py-3">
+                                                        <div class="mb-2">
+                                                            <h6 class="text-primary">Rp. 116.700.000</h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3 col-6 py-3">
+                                                        <div class="mb-2">
+                                                            <h6 class="text-danger text-center">1</h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="text-center border-top py-3">
+                                                <button class="btn btn-primary btn-lg w-75" data-toggle="modal" data-target="#modal-pelanggan-teratas">LIHAT SEMUA</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+				{{> footer}}
+			</div>
+		</div>
+	</div>
+
+	{{> modal_report_grosir}}
+    
+
+	{{> js}}
+    
+
+    <script src="./assets/js/product.js"></script>
+    <script type="text/javascript">
+        tabs();
+
+    </script>
+    <script type="text/javascript" src="https://www.chartjs.org/dist/2.9.3/Chart.min.js"></script>
+    <script type="text/javascript" src="https://www.chartjs.org/samples/latest/utils.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/printThis/1.15.0/printThis.min.js"></script>
+    <script>
+		var config = {
+			type: 'line',
+			data: {
+				labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+				datasets: [{
+					label: 'Pendapatan Bersih',
+					fill: false,
+					backgroundColor: window.chartColors.orange,
+					borderColor: window.chartColors.orange,
+					data: [
+						randomScalingFactor(),
+						randomScalingFactor(),
+						randomScalingFactor(),
+						randomScalingFactor(),
+						randomScalingFactor(),
+						randomScalingFactor(),
+						randomScalingFactor()
+					],
+				}, {
+					label: 'Total Produk',
+					fill: false,
+					backgroundColor: window.chartColors.yellow,
+					borderColor: window.chartColors.yellow,
+					borderDash: [5, 5],
+					data: [
+						randomScalingFactor(),
+						randomScalingFactor(),
+						randomScalingFactor(),
+						randomScalingFactor(),
+						randomScalingFactor(),
+						randomScalingFactor(),
+						randomScalingFactor()
+					],
+				}]
+			},
+			options: {
+				responsive: true,
+				title: {
+					display: true,
+					text: 'Chart.js Line Chart'
+				},
+				tooltips: {
+					mode: 'index',
+					intersect: false,
+				},
+				hover: {
+					mode: 'nearest',
+					intersect: true
+				},
+				scales: {
+					xAxes: [{
+						display: true,
+						scaleLabel: {
+							display: true,
+							labelString: 'Month'
+						}
+					}],
+					yAxes: [{
+						display: true,
+						scaleLabel: {
+							display: true,
+							labelString: 'Value'
+						}
+					}]
+				}
+			}
+		};
+
+		window.onload = function() {
+			var ctx = document.getElementById('chart-area').getContext('2d');
+			window.myLine = new Chart(ctx, config);
+		};
+        
+        function cetak(){
+            $("#print-area").printThis({importCSS:true,canvas:true});
+        }
+    </script>
+</body>
+
+</html>

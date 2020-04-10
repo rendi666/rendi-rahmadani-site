@@ -1,0 +1,197 @@
+/*--------------------------------------------------------------------------------*/
+/*FORMS*/
+/*--------------------------------------------------------------------------------*/
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+textarea, select,
+input[type="text"],
+input[type="date"],
+input[type="button"],
+input[type="submit"],
+input[type="file"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+}
+select {
+	height: 37px;
+	padding-right: $base-spacing-x*2 !important;
+	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 64 64' style='enable-background:new 0 0 64 64;' fill='%23999999' xml:space='preserve'><path d='M51.4,20.3c0.7-0.8,1.9-0.8,2.6,0c0.8,0.7,0.8,1.9,0,2.6L33.2,43.7c-0.7,0.7-1.9,0.7-2.7,0L9.8,22.9c-0.7-0.7-0.7-1.9,0-2.6c0.8-0.8,1.9-0.8,2.7,0l19.4,19.4L51.4,20.3z'/></svg>");
+	background-size: 16px;
+	background-position: calc(100% - 8px) center;
+	background-repeat: no-repeat;
+}
+[type="checkbox"], [type="radio"] {
+	padding: 0;
+}
+textarea {
+	resize: none;
+	&.form-element {
+		height: auto;
+	}
+}
+button {
+	cursor: pointer;
+	@include transition(all 0.3s ease-in-out 0s);
+}
+// label {
+// 	display: inline-block;
+// 	margin-top: $base-spacing*2;
+// 	margin-bottom: $base-spacing*2;
+// 	@include font-size(xs);
+// 	@extend %_font-family-base-2;
+// 	.form-check & {
+// 		margin: 0;
+// 	}
+// 	.form-inline & {
+// 		display: inline-block;
+// 		margin-right: $base-spacing;
+// 	}
+// 	.form-check--inline & {
+// 		line-height: 2;
+// 	}
+// }
+
+.form-block {
+	position: relative;
+	margin-bottom: $base-spacing-y;
+}
+.form-check {
+	position: relative;
+    display: block;
+    padding-left: $base-spacing*6;
+    &__input {
+    	margin-left: -$base-spacing*6;
+		margin-right: $base-spacing;
+		position: absolute;
+		&:disabled {
+			~label {
+				@include color(base-color, black, light-3);
+			}
+		}
+    }
+    &--inline {
+    	display: inline-flex;
+    	align-items: center;
+    	padding-left: 0;
+    	margin-right: $base-spacing*3;
+    }
+}
+.form-check {
+	&__input {
+		margin-top: $base-spacing;
+	}
+	&--inline & {
+		&__input {
+			position: static;
+		    margin-top: 0;
+		    margin-right: $base-spacing*2;
+		    margin-left: 0;
+		}
+    }
+}
+.form-element {
+	display: block;
+	width: 100%;
+	padding: $base-spacing*2 $base-spacing*3;
+	border: 1px solid get('base-color.black.light-5');
+	line-height: $base-line-height;
+	background-color: get('base-color.white.base');
+	@include color(base-color, black, light-1);
+	@include font-size(xs);
+	@include border-radius(sm);
+	@include transition(border-color .25s ease-in-out, box-shadow .25s ease-in-out);
+	@extend %_font-regular;
+	@extend %_font-family-base;
+	&:focus {
+		border-color: get('base-color.black.light-4');
+	}
+	&:disabled, &[readonly] {
+		@extend %_element-disabled;
+	}
+	&[type="date"] {
+		padding: {
+			top: ($base-spacing*2)-1;
+			bottom: ($base-spacing*2)-1;
+		}
+	}
+	.form-inline & {
+		display: inline-block;
+		width: auto;
+		vertical-align: middle;
+	}
+	.form-rounded & {
+		@include border-radius($base-border-radius*6);
+	}
+	.form-gray & {
+		background-color: get('base-color.white.dark-1');
+		&:disabled, &[readonly] {
+			@extend %_element-disabled;
+		}
+	}
+	.form-light-blue & {
+		background-color: #f8fcff;
+		border-color: #cad9e3;
+		&:disabled, &[readonly] {
+			@extend %_element-disabled;
+		}
+	}
+}
+.form-file {
+	position: relative;
+	width: 100%;
+	height: 37px;
+	padding: $base-spacing*2 $base-spacing*3 0 $base-spacing*5;
+	margin: 0;
+	@include transition(all 0.3s ease-in-out 0s);
+	@include font-size(sm);
+	@extend %_font-family-base;
+	&:before {
+		position: absolute;
+		left: 0;
+		top: 0;
+		line-height: $base-line-height;
+		content: 'Pilih file';
+		z-index: 1;
+		font-size: $base-font-size;
+		display: inline-block;
+		line-height: $base-line-height;
+		padding: $base-spacing * 2 $base-spacing-x;
+		text-align: center;
+		cursor: pointer;
+		vertical-align: top;
+		border: none;
+		@include color-bg(base-color, white);
+		@include color(base-color, black, light-2);
+		@include border-radius($base-border-radius);
+		@extend %_font-bold;
+		&:hover {
+			@include color(base-color, black);
+			@include opacity(0.8);
+		}
+		// @extend .btn--blue-detik;
+		@include transition(all 0.3s ease-in-out 0s);
+	}
+	&:after {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 117px;
+		height: 37px;
+		background: #fff;
+	}
+	&__input {
+		position: absolute;
+		left: 25px;
+	}
+}
+
+%_element-disabled {
+	background-color: get('base-color.white.dark-2');
+}

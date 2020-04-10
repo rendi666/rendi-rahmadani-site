@@ -1,0 +1,85 @@
+{{#eq type compare="default"}}
+    {{#each channel}}
+    {{#gte @index compare=../index_start}}
+    {{#gte @index compare=../index_end}}
+    {{else}}
+    <article class="col-md-3 col-6 list-content__item">
+        <div class="media">
+            <div class="media__image">
+                <a href="detail_product.html" class="media__link">
+                    <span class="ratiobox ratiobox--16-9 lqd">
+                        <img src="./assets/images/img1.jpg" alt="">
+                    </span>
+                </a>
+            </div>
+            <div class="media__text">
+                <h2 class="media__title">
+                    <a href="detail_product.html" class="media__link">Kue Nastar buatan rumahan</a>
+                </h2>
+                <div class="media__price">Rp. 30.000</div>
+            </div>
+        </div>
+    </article>
+    {{/gte}}
+    {{else}}
+    {{/gte}}
+    {{/each}}
+{{else}}
+{{#eq type compare="slider"}}
+    {{#each channel}}
+    {{#gte @index compare=../index_start}}
+    {{#gte @index compare=../index_end}}
+    {{else}}
+    <article class="col-12 list-content__item">
+        <div class="media">
+            <div class="media__image">
+                <a href="detail_product.html" class="media__link">
+                    <span class="ratiobox ratiobox--16-9 lqd">
+                        <img src="./assets/images/img1.jpg" alt="">
+                    </span>
+                </a>
+            </div>
+            <div class="media__text">
+                <h2 class="media__title">
+                    <a href="detail_product.html" class="media__link">Kue Nastar buatan rumahan</a>
+                </h2>
+                <div class="media__price">Rp. 30.000</div>
+            </div>
+        </div>
+    </article>
+    {{/gte}}
+    {{else}}
+    {{/gte}}
+    {{/each}}
+{{else}}
+{{#eq type compare="slider_sale"}}
+    {{#each channel}}
+    {{#gte @index compare=../index_start}}
+    {{#gte @index compare=../index_end}}
+    {{else}}
+    <article class="col-12 list-content__item">
+        <div class="media">
+            <div class="media__image">
+                <a href="detail_product.html" class="media__link">
+                    <span class="ratiobox ratiobox--16-9 lqd">
+                        <img src="./assets/images/img1.jpg" alt="">
+                    </span>
+                </a>
+            </div>
+            <div class="media__text">
+                <h2 class="media__title">
+                    <a href="detail_product.html" class="media__link">Kue Nastar buatan rumahan</a>
+                </h2>
+                <div class="media__sale">Rp. 50.000</div>
+                <div class="media__price">Rp. 30.000</div>
+            </div>
+        </div>
+    </article>
+    {{/gte}}
+    {{else}}
+    {{/gte}}
+    {{/each}}
+{{else}}
+{{/eq}}
+{{/eq}}
+{{/eq}}

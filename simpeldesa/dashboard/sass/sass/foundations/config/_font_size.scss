@@ -1,0 +1,35 @@
+$aula-config: deep-map-merge(
+  (
+    'font': (
+      'weight': (
+        'light'   : 300,
+        'regular' : 400,
+        'medium'  : 500,
+        'semibold': 600,
+        'bold'    : 700
+      ),
+      'size': (
+        'hero': $base-font-size * 2,
+        'xxl' : $base-font-size * 1.625,
+        'xl'  : $base-font-size * 1.4375,
+        'lg'  : $base-font-size * 1.25,
+        'md'  : $base-font-size * 1.125,
+        'sm'  : $base-font-size,
+        'xs'  : $base-font-size - 2,
+        'xxs' : $base-font-size - 4
+      ),
+      'icon': (
+        'size': (
+          'xxl': $base-font-size * 16,
+          'xl' : $base-font-size * 8,
+          'lg' : $base-font-size * 4,
+          'md' : $base-font-size * 2,
+          'sm' : $base-font-size * 1.5,
+          'xs' : $base-font-size
+        )
+      )
+    )
+  ),
+  $aula-config,
+  true
+);

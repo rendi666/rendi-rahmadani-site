@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)#home -->
+<html lang="en">
+
+<head>
+	{{> head}}
+<body>
+	<div class="app-container app-theme-white body-tabs-shadow fixed-header fixed-sidebar">
+		{{> header}}
+		<div class="app-main">
+			{{> sidebar active_donatur=true}}
+			<div class="app-main__outer">
+				<div class="app-main__inner">
+                    <div class="app-page-title">
+                        <div class="page-title-wrapper">
+                            <div class="page-title-heading">
+                                <div class="page-title-icon">
+                                    <i class="pe-7s-wallet icon_gradient bg-tempting-azure">    </i>
+                                </div>
+                                <div>Data Donatur
+                                    <div class="page-title-subheading">List Data Donatur
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>
+                    </div>
+                    
+                    <div class="review-block">
+                        <div class="box box--shadow box--rounded bg-white">
+                            <div class="tabs p_tabs">
+                                <a href="#all" class="tabs__item">Semua (20)</a>
+                                <a href="#1" class="tabs__item">Pending (5)</a>
+                                <a href="#2" class="tabs__item">Paid (1)</a>
+                                <a href="#3" class="tabs__item">Canceled (0)</a>
+                            </div>    
+                            <div class="tabs-content py-0">
+                                <div id="table_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+                                    <div class="row mt-3 mb-2">
+                                        <div class="col-sm-12 col-md-6">
+                                            <div class="dataTables_length d-inline-block mr-4" id="table_length">
+                                                    <select name="table_length" aria-controls="table" class="custom-select custom-select-sm form-control form-control-sm">
+                                                        <option value="10">10</option>
+                                                        <option value="25">25</option>
+                                                        <option value="50">50</option>
+                                                        <option value="100">100</option>
+                                                    </select>
+                                            </div>
+                                            <button type="button" onclick="bulk_delete('PAID')" class="btn btn-action btn-success tooltips btn-shadow btn-sm mr-2" data-toggle="tooltip" title="" data-original-title="Bayar"><i class="fa fa-check-circle" aria-hidden="true"></i> Bayar</button>
+                                            <button type="button" onclick="bulk_delete('CANCELED')" class="btn btn-action btn-danger tooltips btn-shadow btn-sm" data-toggle="tooltip" title="" data-original-title="Cancel"><i class="fa fa-times-circle" aria-hidden="true"></i> Cancel</button>
+                                        </div>
+                                        <div class="col-sm-12 col-md-6 d-none d-md-block">
+                                            <div id="table_filter" class="dataTables_filter">
+                                                <label>Search:
+                                                    <input type="search" class="form-control form-control-sm" placeholder="" aria-controls="table"></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="all">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <table class="table table-striped table-bordered table-hover table-full-width dataTable no-footer" id="table" role="grid" aria-describedby="table_info" style="width: 1296px;">
+                                                <thead>
+                                                    <tr role="row">
+                                                        {{!-- <th class="align-center sorting_disabled" rowspan="1" colspan="1" style="width: 13.4px;" aria-label=""><input
+                                                                type="checkbox" id="checkAll"></th> --}}
+                                                        {{!-- <th class="sorting_desc" tabindex="0" aria-controls="table" rowspan="1" colspan="1" style="width: 183.2px;"
+                                                            aria-sort="descending" aria-label="NIK: activate to sort column ascending">NIK</th> --}}
+                                                        <th class="sorting" tabindex="0" aria-controls="table" rowspan="1" colspan="1" style="width: 175.2px;"
+                                                            aria-label="Nama: activate to sort column ascending">Nama</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="table" rowspan="1" colspan="1" style="width: 303.2px;"
+                                                            aria-label="Info Donasi: activate to sort column ascending">Info Donasi</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="table" rowspan="1" colspan="1" style="width: 167.2px;"
+                                                            aria-label="Jumlah Donasi: activate to sort column ascending">Jumlah Donasi</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="table" rowspan="1" colspan="1" style="width: 93.2px;"
+                                                            aria-label="Metode: activate to sort column ascending">Metode</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="table" rowspan="1" colspan="1" style="width: 104.2px;"
+                                                            aria-label="Status: activate to sort column ascending">Status</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="table" rowspan="1" colspan="1" style="width: 104.2px;"
+                                                            aria-label="Status: activate to sort column ascending">Action</th>
+                                                        </tr>
+                                                </thead>
+                                                <tbody>
+                                                    
+                                                <tr role="row" class="odd">
+                                                    {{!-- <td class=" align-center"><i class="fas fa-check-square"></i></td>
+                                                    <td class="sorting_1">3305084107840105</td> --}}
+                                                    <td>STIYA UJI PRIYATIN</td>
+                                                    <td>Longsor</td>
+                                                    <td> 10000000</td>
+                                                    <td>-</td>
+                                                    <td><span class="badge badge-success">PAID</span></td>
+                                                    <td>
+                                                        <button class="btn btn-secondary btn-sm">DETAIL</button>
+                                                    </td>
+                                                </tr>
+                                                <tr role="row" class="even">
+                                                    {{!-- <td class=" align-center"><i class="fas fa-check-square"></i></td>
+                                                    <td class="sorting_1">3305084107840105</td> --}}
+                                                    <td>STIYA UJI PRIYATIN</td>
+                                                    <td>KURANG GIZI</td>
+                                                    <td> 20000</td>
+                                                    <td>-</td>
+                                                    <td><span class="badge badge-danger">CANCELED</span></td>
+                                                    <td>
+                                                        <button class="btn btn-secondary btn-sm">DETAIL</button>
+                                                    </td>
+                                                </tr>
+                                                <tr role="row" class="odd">
+                                                    {{!-- <td class=" align-center"><i class="fas fa-check-square"></i></td>
+                                                    <td class="sorting_1">3206322911960002</td> --}}
+                                                    <td>HENDI PRANATA</td>
+                                                    <td>Bedah rumah</td>
+                                                    <td> 2000</td>
+                                                    <td>-</td>
+                                                    <td><span class="badge badge-danger">CANCELED</span></td>
+                                                    <td>
+                                                        <button class="btn btn-secondary btn-sm">DETAIL</button>
+                                                    </td>
+                                                </tr>
+                                                <tr role="row" class="even">
+                                                    {{!-- <td class=" align-center"><i class="fas fa-check-square"></i></td>
+                                                    <td class="sorting_1">3206322911960002</td> --}}
+                                                    <td>HENDI PRANATA</td>
+                                                    <td>ANAK TERLANTAR</td>
+                                                    <td> 200000</td>
+                                                    <td>-</td>
+                                                    <td><span class="badge badge-success">PAID</span></td>
+                                                    <td>
+                                                        <button class="btn btn-secondary btn-sm">DETAIL</button>
+                                                    </td>
+                                                </tr>
+                                                <tr role="row" class="odd">
+                                                    {{!-- <td class=" align-center"><input type="checkbox" class="user-donor" onclick="toggleCheckAll(this)" value="68"></td>
+                                                    <td class="sorting_1">3206322911960002</td> --}}
+                                                    <td>HENDI PRANATA</td>
+                                                    <td>bencana longsor kampung ABCD</td>
+                                                    <td> 10000</td>
+                                                    <td>-</td>
+                                                    <td><span class="badge badge-warning">PENDING</span></td>
+                                                    <td>
+                                                        <button class="btn btn-success btn-sm">BAYAR</button>
+                                                        <button class="btn btn-danger btn-sm">CANCEL</button>
+                                                    </td>
+                                                </tr>
+                                                <tr role="row" class="even">
+                                                    {{!-- <td class=" align-center"><input type="checkbox" class="user-donor" onclick="toggleCheckAll(this)" value="62"></td>
+                                                    <td class="sorting_1">3206322803830001</td> --}}
+                                                    <td>RENO SUNDARA</td>
+                                                    <td>Lomba Rebana</td>
+                                                    <td> 10000</td>
+                                                    <td>-</td>
+                                                    <td><span class="badge badge-warning">PENDING</span></td>
+                                                    <td>
+                                                        <button class="btn btn-success btn-sm">BAYAR</button>
+                                                        <button class="btn btn-danger btn-sm">CANCEL</button>
+                                                    </td>
+                                                </tr>
+                                                <tr role="row" class="odd">
+                                                    {{!-- <td class=" align-center"><i class="fas fa-check-square"></i></td>
+                                                    <td class="sorting_1">3206322803830001</td> --}}
+                                                    <td>RENO SUNDARA</td>
+                                                    <td>Bedah rumah</td>
+                                                    <td> 10000000</td>
+                                                    <td>-</td>
+                                                    <td><span class="badge badge-success">PAID</span></td>
+                                                    <td>
+                                                        <button class="btn btn-secondary btn-sm">DETAIL</button>
+                                                    </td>
+                                                </tr>
+                                                <tr role="row" class="even">
+                                                    {{!-- <td class=" align-center"><input type="checkbox" class="user-donor" onclick="toggleCheckAll(this)" value="59"></td>
+                                                    <td class="sorting_1">3206322803830001</td> --}}
+                                                    <td>RENO SUNDARA</td>
+                                                    <td>Lomba Rebana</td>
+                                                    <td> 10000</td>
+                                                    <td>-</td>
+                                                    <td><span class="badge badge-warning">PENDING</span></td>
+                                                    <td>
+                                                        <button class="btn btn-success btn-sm">BAYAR</button>
+                                                        <button class="btn btn-danger btn-sm">CANCEL</button>
+                                                    </td>
+                                                </tr>
+                                                <tr role="row" class="odd">
+                                                    {{!-- <td class=" align-center"><input type="checkbox" class="user-donor" onclick="toggleCheckAll(this)" value="46"></td>
+                                                    <td class="sorting_1">3206322803830001</td> --}}
+                                                    <td>RENO SUNDARA</td>
+                                                    <td>Bantuan Dana</td>
+                                                    <td> 10000</td>
+                                                    <td>-</td>
+                                                    <td><span class="badge badge-warning">PENDING</span></td>
+                                                    <td>
+                                                        <button class="btn btn-success btn-sm">BAYAR</button>
+                                                        <button class="btn btn-danger btn-sm">CANCEL</button>
+                                                    </td>
+                                                </tr>
+                                                <tr role="row" class="even">
+                                                    {{!-- <td class=" align-center"><input type="checkbox" class="user-donor" onclick="toggleCheckAll(this)" value="58"></td>
+                                                    <td class="sorting_1">3206322803830001</td> --}}
+                                                    <td>RENO SUNDARA</td>
+                                                    <td>Lomba Rebana</td>
+                                                    <td> 10000</td>
+                                                    <td>-</td>
+                                                    <td><span class="badge badge-warning">PENDING</span></td>
+                                                    <td>
+                                                        <button class="btn btn-success btn-sm">BAYAR</button>
+                                                        <button class="btn btn-danger btn-sm">CANCEL</button>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="1">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <table class="table table-striped table-bordered table-hover table-full-width dataTable no-footer" id="table" role="grid" aria-describedby="table_info" style="width: 1296px;">
+                                                <thead>
+                                                    <tr role="row">
+                                                        <th class="align-center sorting_disabled" rowspan="1" colspan="1" style="width: 13.4px;" aria-label=""><input
+                                                                type="checkbox" id="checkAll"></th>
+                                                        {{!-- <th class="sorting_desc" tabindex="0" aria-controls="table" rowspan="1" colspan="1" style="width: 183.2px;"
+                                                            aria-sort="descending" aria-label="NIK: activate to sort column ascending">NIK</th> --}}
+                                                        <th class="sorting" tabindex="0" aria-controls="table" rowspan="1" colspan="1" style="width: 175.2px;"
+                                                            aria-label="Nama: activate to sort column ascending">Nama</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="table" rowspan="1" colspan="1" style="width: 303.2px;"
+                                                            aria-label="Info Donasi: activate to sort column ascending">Info Donasi</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="table" rowspan="1" colspan="1" style="width: 167.2px;"
+                                                            aria-label="Jumlah Donasi: activate to sort column ascending">Jumlah Donasi</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="table" rowspan="1" colspan="1" style="width: 93.2px;"
+                                                            aria-label="Metode: activate to sort column ascending">Metode</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="table" rowspan="1" colspan="1" style="width: 104.2px;"
+                                                            aria-label="Status: activate to sort column ascending">Status</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="table" rowspan="1" colspan="1" style="width: 104.2px;"
+                                                            aria-label="Status: activate to sort column ascending">Action</th>
+                                                        </tr>
+                                                </thead>
+                                                <tbody>
+                                                    
+                                            
+                                                <tr role="row" class="odd">
+                                                    <td class=" align-center"><input type="checkbox" class="user-donor" onclick="toggleCheckAll(this)" value="68"></td>
+                                                    {{!-- <td class="sorting_1">3206322911960002</td> --}}
+                                                    <td>HENDI PRANATA</td>
+                                                    <td>bencana longsor kampung ABCD</td>
+                                                    <td> 10000</td>
+                                                    <td>-</td>
+                                                    <td><span class="badge badge-warning">PENDING</span></td>
+                                                    <td>
+                                                        <button class="btn btn-success btn-sm">BAYAR</button>
+                                                        <button class="btn btn-danger btn-sm">CANCEL</button>
+                                                    </td>
+                                                </tr>
+                                                <tr role="row" class="even">
+                                                    <td class=" align-center"><input type="checkbox" class="user-donor" onclick="toggleCheckAll(this)" value="62"></td>
+                                                    {{!-- <td class="sorting_1">3206322803830001</td> --}}
+                                                    <td>RENO SUNDARA</td>
+                                                    <td>Lomba Rebana</td>
+                                                    <td> 10000</td>
+                                                    <td>-</td>
+                                                    <td><span class="badge badge-warning">PENDING</span></td>
+                                                    <td>
+                                                        <button class="btn btn-success btn-sm">BAYAR</button>
+                                                        <button class="btn btn-danger btn-sm">CANCEL</button>
+                                                    </td>
+                                                </tr>
+                                                
+                                                <tr role="row" class="even">
+                                                    <td class=" align-center"><input type="checkbox" class="user-donor" onclick="toggleCheckAll(this)" value="59"></td>
+                                                    {{!-- <td class="sorting_1">3206322803830001</td> --}}
+                                                    <td>RENO SUNDARA</td>
+                                                    <td>Lomba Rebana</td>
+                                                    <td> 10000</td>
+                                                    <td>-</td>
+                                                    <td><span class="badge badge-warning">PENDING</span></td>
+                                                    <td>
+                                                        <button class="btn btn-success btn-sm">BAYAR</button>
+                                                        <button class="btn btn-danger btn-sm">CANCEL</button>
+                                                    </td>
+                                                </tr>
+                                                <tr role="row" class="odd">
+                                                    <td class=" align-center"><input type="checkbox" class="user-donor" onclick="toggleCheckAll(this)" value="46"></td>
+                                                    {{!-- <td class="sorting_1">3206322803830001</td> --}}
+                                                    <td>RENO SUNDARA</td>
+                                                    <td>Bantuan Dana</td>
+                                                    <td> 10000</td>
+                                                    <td>-</td>
+                                                    <td><span class="badge badge-warning">PENDING</span></td>
+                                                    <td>
+                                                        <button class="btn btn-success btn-sm">BAYAR</button>
+                                                        <button class="btn btn-danger btn-sm">CANCEL</button>
+                                                    </td>
+                                                </tr>
+                                                <tr role="row" class="even">
+                                                    <td class=" align-center"><input type="checkbox" class="user-donor" onclick="toggleCheckAll(this)" value="58"></td>
+                                                    {{!-- <td class="sorting_1">3206322803830001</td> --}}
+                                                    <td>RENO SUNDARA</td>
+                                                    <td>Lomba Rebana</td>
+                                                    <td> 10000</td>
+                                                    <td>-</td>
+                                                    <td><span class="badge badge-warning">PENDING</span></td>
+                                                    <td>
+                                                        <button class="btn btn-success btn-sm">BAYAR</button>
+                                                        <button class="btn btn-danger btn-sm">CANCEL</button>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="2">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <table class="table table-striped table-bordered table-hover table-full-width dataTable no-footer" id="table" role="grid" aria-describedby="table_info" style="width: 1296px;">
+                                                <thead>
+                                                    <tr role="row">
+                                                        {{!-- <th class="align-center sorting_disabled" rowspan="1" colspan="1" style="width: 13.4px;" aria-label=""><input
+                                                                type="checkbox" id="checkAll"></th> --}}
+                                                        {{!-- <th class="sorting_desc" tabindex="0" aria-controls="table" rowspan="1" colspan="1" style="width: 183.2px;"
+                                                            aria-sort="descending" aria-label="NIK: activate to sort column ascending">NIK</th> --}}
+                                                        <th class="sorting" tabindex="0" aria-controls="table" rowspan="1" colspan="1" style="width: 175.2px;"
+                                                            aria-label="Nama: activate to sort column ascending">Nama</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="table" rowspan="1" colspan="1" style="width: 303.2px;"
+                                                            aria-label="Info Donasi: activate to sort column ascending">Info Donasi</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="table" rowspan="1" colspan="1" style="width: 167.2px;"
+                                                            aria-label="Jumlah Donasi: activate to sort column ascending">Jumlah Donasi</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="table" rowspan="1" colspan="1" style="width: 93.2px;"
+                                                            aria-label="Metode: activate to sort column ascending">Metode</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="table" rowspan="1" colspan="1" style="width: 104.2px;"
+                                                            aria-label="Status: activate to sort column ascending">Status</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="table" rowspan="1" colspan="1" style="width: 104.2px;"
+                                                            aria-label="Status: activate to sort column ascending">Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    
+                                                <tr role="row" class="odd">
+                                                    {{!-- <td class=" align-center"><i class="fas fa-check-square"></i></td>
+                                                    <td class="sorting_1">3305084107840105</td> --}}
+                                                    <td>STIYA UJI PRIYATIN</td>
+                                                    <td>Longsor</td>
+                                                    <td> 10000000</td>
+                                                    <td>-</td>
+                                                    <td><span class="badge badge-success">PAID</span></td>
+                                                    <td>
+                                                        <button class="btn btn-secondary btn-sm">DETAIL</button>
+                                                    </td>
+                                                </tr>
+                                                
+                                                <tr role="row" class="even">
+                                                    {{!-- <td class=" align-center"><i class="fas fa-check-square"></i></td>
+                                                    <td class="sorting_1">3206322911960002</td> --}}
+                                                    <td>HENDI PRANATA</td>
+                                                    <td>ANAK TERLANTAR</td>
+                                                    <td> 200000</td>
+                                                    <td>-</td>
+                                                    <td><span class="badge badge-success">PAID</span></td>
+                                                    <td>
+                                                        <button class="btn btn-secondary btn-sm">DETAIL</button>
+                                                    </td>
+                                                </tr>
+                                                
+                                                <tr role="row" class="odd">
+                                                    {{!-- <td class=" align-center"><i class="fas fa-check-square"></i></td>
+                                                    <td class="sorting_1">3206322803830001</td> --}}
+                                                    <td>RENO SUNDARA</td>
+                                                    <td>Bedah rumah</td>
+                                                    <td> 10000000</td>
+                                                    <td>-</td>
+                                                    <td><span class="badge badge-success">PAID</span></td>
+                                                    <td>
+                                                        <button class="btn btn-secondary btn-sm">DETAIL</button>
+                                                    </td>
+                                                </tr>
+                                                
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="3">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <table class="table table-striped table-bordered table-hover table-full-width dataTable no-footer" id="table" role="grid" aria-describedby="table_info" style="width: 1296px;">
+                                                <thead>
+                                                    <tr role="row">
+                                                        {{!-- <th class="align-center sorting_disabled" rowspan="1" colspan="1" style="width: 13.4px;" aria-label=""><input
+                                                                type="checkbox" id="checkAll"></th> --}}
+                                                        {{!-- <th class="sorting_desc" tabindex="0" aria-controls="table" rowspan="1" colspan="1" style="width: 183.2px;"
+                                                            aria-sort="descending" aria-label="NIK: activate to sort column ascending">NIK</th> --}}
+                                                        <th class="sorting" tabindex="0" aria-controls="table" rowspan="1" colspan="1" style="width: 175.2px;"
+                                                            aria-label="Nama: activate to sort column ascending">Nama</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="table" rowspan="1" colspan="1" style="width: 303.2px;"
+                                                            aria-label="Info Donasi: activate to sort column ascending">Info Donasi</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="table" rowspan="1" colspan="1" style="width: 167.2px;"
+                                                            aria-label="Jumlah Donasi: activate to sort column ascending">Jumlah Donasi</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="table" rowspan="1" colspan="1" style="width: 93.2px;"
+                                                            aria-label="Metode: activate to sort column ascending">Metode</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="table" rowspan="1" colspan="1" style="width: 104.2px;"
+                                                            aria-label="Status: activate to sort column ascending">Status</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="table" rowspan="1" colspan="1" style="width: 104.2px;"
+                                                            aria-label="Status: activate to sort column ascending">Action</th>
+                                                        </tr>
+                                                </thead>
+                                                <tbody>
+                                                    
+                                                
+                                                <tr role="row" class="even">
+                                                    {{!-- <td class=" align-center"><i class="fas fa-check-square"></i></td>
+                                                    <td class="sorting_1">3305084107840105</td> --}}
+                                                    <td>STIYA UJI PRIYATIN</td>
+                                                    <td>KURANG GIZI</td>
+                                                    <td> 20000</td>
+                                                    <td>-</td>
+                                                    <td><span class="badge badge-danger">CANCELED</span></td>
+                                                    <td>
+                                                        <button class="btn btn-secondary btn-sm">DETAIL</button>
+                                                    </td>
+                                                </tr>
+                                                <tr role="row" class="odd">
+                                                    {{!-- <td class=" align-center"><i class="fas fa-check-square"></i></td>
+                                                    <td class="sorting_1">3206322911960002</td> --}}
+                                                    <td>HENDI PRANATA</td>
+                                                    <td>Bedah rumah</td>
+                                                    <td> 2000</td>
+                                                    <td>-</td>
+                                                    <td><span class="badge badge-danger">CANCELED</span></td>
+                                                    <td>
+                                                        <button class="btn btn-secondary btn-sm">DETAIL</button>
+                                                    </td>
+                                                </tr>
+                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+				{{> footer}}
+			</div>
+		</div>
+	</div>
+
+	{{> modal_iframe}}
+
+	{{> modal_form}}
+	
+	{{> modal_komentar}}
+
+	{{> js}}
+
+    <script src="./assets/js/product.js"></script>
+    <script type="text/javascript">
+        tabs();
+
+    </script>
+</body>
+
+</html>
