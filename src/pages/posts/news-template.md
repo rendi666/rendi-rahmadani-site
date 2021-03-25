@@ -1,5 +1,5 @@
 ---
-title: News Template
+title: News Template Mobile Site
 subtitle: ""
 date: 2021-03-24T02:49:30.075Z
 thumb_img_path: /images/cover.jpg
