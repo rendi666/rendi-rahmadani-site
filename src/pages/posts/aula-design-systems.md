@@ -11,15 +11,11 @@ template: post
 
 Aula adalah Design System untuk detiknetwork yang berisi kumpulan komponen dan guideline, beserta rules dan standart.
 
-
-
 ### Metode yang digunakan
 
 Aula menggunakan metode **atomic design system.**Atomic Design System adalah sebuah metode Pendefinisian dari objek terkecil sampai objek Keseluruhan. Untuk lebih jelasnya, berikut ini lampiran struktur dan contoh Atomic Design Systems:
 
 ![Atomic Design By Brad Frost](/images/atomic.png "Atomic Design By Brad Frost")
-
-
 
 ### The Benefits
 
@@ -28,8 +24,6 @@ Aula menggunakan metode **atomic design system.**Atomic Design System adalah seb
 * Menghemat banyak waktu dan biaya dalam proses pengembangan produk.
 * Kualitas dan awareness user terhadap produk menjadi lebih baik melalui tampilan yang konsisten.
 * Tidak ada lagi perdebatan tentang selera pribadi karena setiap element nantinya ada proses testing.
-
-
 
 ### Design Principles
 
@@ -41,8 +35,6 @@ Desain sesuai dengan Goals. Pikirkan tentang Goals dan batasan penggunaan design
 
 Buat komponen yang reusable untuk membuat struktur desain yang konsisten.
 
-
-
 ##### Stabil
 
 Membuat ekosistem desain yang stabil di mana elemen tidak sering berubah-ubah dengan didasari hasil research.
@@ -51,13 +43,9 @@ Membuat ekosistem desain yang stabil di mana elemen tidak sering berubah-ubah de
 
 Mempunyai desain yang konsisten bukan berarti membatasi untuk membuat desain. Berikan sedikit variasi desain dengan elemen dasar yang sudah di buat.
 
-
-
 ##### Satu Kesatuan
 
 Lihat keseimbangan, harmoni, dan ragam desain secara keseluruhan. Dengan kata lain, mundur selangkah dan lihat keseluruhan desain saat menerapkan Prinsip Desain.
-
-
 
 ### Tone Of Voice
 
@@ -67,32 +55,28 @@ Lihat keseimbangan, harmoni, dan ragam desain secara keseluruhan. Dengan kata la
 
 Penjelasan yang jelas tentang apa yang akan terjadi selanjutnya.
 
-
-
 ##### Ringkas
 
 Pastikan tidak menggunakan terlalu banyak kata yang terdengar panjang lebar atau formal
-
-
 
 ##### Seperti Berbicara Langsung
 
 Membayangkan berbicara kepada user secara langsung
 
-
-
 ##### Bahasa Sederhana
 
 Menggunakan bahasa yang sederhana / mudah dipahami
-
-
 
 ##### Be clever
 
 Berikan informasi yang paling penting terlebih dahulu
 
-
-
 #### Nada Empati
 
 Ketika pengguna tersesat atau menemukan beberapa bug gunakan bahasa yang menunjukan Empati
+
+
+
+Untuk lebih lengkap bisa dilihat di link berikut:
+
+<https://zeroheight.com/0cb596096/p/449946-aula-library>
